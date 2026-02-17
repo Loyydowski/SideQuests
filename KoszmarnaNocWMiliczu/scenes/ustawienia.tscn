@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://busqgss0rai7c"]
+
+[ext_resource type="Script" uid="uid://b3ietf37p8h7h" path="res://skrypty/ustawienia.gd" id="1_01rqy"]
+[ext_resource type="Script" uid="uid://cosqysi5lwtjw" path="res://skrypty/domenu.gd" id="2_p0n22"]
+
+[node name="Ustawienia" type="Control" unique_id=1323325434]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01rqy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=493470858]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -184.5
+offset_right = 200.0
+offset_bottom = 184.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=693377643]
+layout_mode = 2
+text = "USTAWIENIA"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1618593012]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1581489729]
+layout_mode = 2
+text = "GRAFIKA "
+
+[node name="KontenerRozdzielczosc" type="HBoxContainer" parent="VBoxContainer" unique_id=509482499]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KontenerRozdzielczosc" unique_id=1419296184]
+layout_mode = 2
+text = "Rozdzielczość"
+
+[node name="WyborRozdzielczosci" type="OptionButton" parent="VBoxContainer/KontenerRozdzielczosc" unique_id=737570906]
+layout_mode = 2
+
+[node name="KontenerPelnyEkran" type="HBoxContainer" parent="VBoxContainer" unique_id=575281816]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KontenerPelnyEkran" unique_id=542308002]
+layout_mode = 2
+text = "Pełny ekran:"
+
+[node name="CheckPelnyEkran" type="CheckBox" parent="VBoxContainer/KontenerPelnyEkran" unique_id=598181928]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=877101795]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=1035803504]
+layout_mode = 2
+text = "DŹWIĘK "
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=221914697]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=57487737]
+layout_mode = 2
+text = "Głośność główna:"
+
+[node name="SliderGlosnoscGlowna" type="HSlider" parent="VBoxContainer/HBoxContainer" unique_id=578557793]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="LabelGlosnoscGlowna" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1307670237]
+layout_mode = 2
+
+[node name="KontenerGlosnoscMuzyka" type="HBoxContainer" parent="VBoxContainer" unique_id=723669843]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KontenerGlosnoscMuzyka" unique_id=863902050]
+layout_mode = 2
+text = "Muzyka:"
+
+[node name="SliderGlosnoscMuzyka" type="HSlider" parent="VBoxContainer/KontenerGlosnoscMuzyka" unique_id=1282044392]
+layout_mode = 2
+
+[node name="LabelGlosnoscMuzyka" type="Label" parent="VBoxContainer/KontenerGlosnoscMuzyka" unique_id=1312591697]
+layout_mode = 2
+
+[node name="KontenerGlosnoscEfekty" type="HBoxContainer" parent="VBoxContainer" unique_id=2070270525]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/KontenerGlosnoscEfekty" unique_id=62975924]
+layout_mode = 2
+text = "Efekty:"
+
+[node name="SliderGlosnoscEfekty" type="HSlider" parent="VBoxContainer/KontenerGlosnoscEfekty" unique_id=1698011398]
+layout_mode = 2
+
+[node name="LabelGlosnoscEfekty" type="Label" parent="VBoxContainer/KontenerGlosnoscEfekty" unique_id=329151966]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer" unique_id=18498873]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1402916005]
+layout_mode = 2
+
+[node name="PrzyciskZapisz" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=911394425]
+layout_mode = 2
+text = "Zapisz"
+
+[node name="PrzyciskPowrot" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1836372240]
+layout_mode = 2
+text = "Menu"
+script = ExtResource("2_p0n22")

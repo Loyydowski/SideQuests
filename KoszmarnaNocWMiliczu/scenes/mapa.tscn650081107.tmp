@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://ci3nnxf6y46dh"]
+
+[ext_resource type="PackedScene" uid="uid://b2lc2kkf42pyv" path="res://assets/Computer Desk.FBX" id="1_ekubr"]
+[ext_resource type="Script" uid="uid://f0hy5nkdtxa6" path="res://skrypty/gracz.gd" id="1_u1vf7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u1vf7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfnl5"]
+albedo_color = Color(0.9788858, 0.88694847, 0.19580597, 1)
+
+[node name="Mapa" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.695598, 0, -0.61707115)
+size = Vector3(10.612183, 0.1, 10.094727)
+material = SubResource("StandardMaterial3D_u1vf7")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6853905, 0.5507373, 1.3232642)
+size = Vector3(10.666, 3.5, 0.081)
+material = SubResource("StandardMaterial3D_tfnl5")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6853905, 0.5507373, -4.4783764)
+size = Vector3(10.666, 3.5, 0.081)
+material = SubResource("StandardMaterial3D_tfnl5")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.565, 0.881, -1.448)
+size = Vector3(10.666, 3.5, 0.081)
+material = SubResource("StandardMaterial3D_tfnl5")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D4"]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 0.5842452, -0.58198375, -7.2604713)
+size = Vector3(10.666, 4.022, 0.081)
+material = SubResource("StandardMaterial3D_tfnl5")
+
+[node name="Computer Desk" parent="." instance=ExtResource("1_ekubr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05280119, -1.8691244)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, -1.2675477, 2.753973, -1.7566383)
+light_energy = 4.184
+
+[node name="Player" type="Node3D" parent="."]
+script = ExtResource("1_u1vf7")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.009, 0.879, -1.8585628)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player"]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://o5ykihaglcic"]
+
+[ext_resource type="Script" uid="uid://f0hy5nkdtxa6" path="res://skrypty/gracz.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://bu4nhscqee63o" path="res://skrypty/graczgui.gd" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://dosw5bnllaete" path="res://scenes/camera.tscn" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://cmmnc0pibmtvl" path="res://scenes/panel_telefonu.tscn" id="4_dqkch"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_g2els")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 641.0
+script = ExtResource("2_qhqgy")
+
+[node name="PanelTelefonu" parent="CanvasLayer/UI" instance=ExtResource("4_dqkch")]
+layout_mode = 1
+offset_left = 221.5
+offset_right = 221.5
+
+[node name="RightButton" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 227.0
+offset_right = 1154.0
+offset_bottom = 380.0
+text = "W prawo"
+
+[node name="LeftButton" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 220.0
+offset_right = 188.0
+offset_bottom = 373.0
+text = "W lewo"
+
+[node name="PanelKamer" parent="CanvasLayer/UI" instance=ExtResource("3_qhqgy")]
+layout_mode = 1
+
+[node name="CameraButton" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 530.0
+offset_right = 928.0
+offset_bottom = 643.0
+text = "Kamery"
+
+[node name="Godzina" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
+[node name="TelefonPrzycisk" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -353.5
+offset_right = 353.5
+offset_bottom = 113.0
+grow_horizontal = 2
+text = "Telefon"

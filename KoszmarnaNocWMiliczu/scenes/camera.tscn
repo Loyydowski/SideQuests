@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dosw5bnllaete"]
+
+[node name="Camera" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 979.0
+offset_top = 476.0
+offset_right = 1131.0
+offset_bottom = 543.0
+text = "CAM 1"

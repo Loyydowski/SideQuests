@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://clqnjfngq8vw7"]
+
+[ext_resource type="Script" uid="uid://q5t6qtw3ejdo" path="res://skrypty/noc1.gd" id="1_vjb58"]
+[ext_resource type="Script" uid="uid://gunuh2xwtinv" path="res://skrypty/zamknijgre.gd" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://dhkv2gldf5ewr" path="res://skrypty/przyciskopcjemenu.gd" id="3_con2f"]
+[ext_resource type="Script" uid="uid://dw14ahau0r5xa" path="res://skrypty/specjalnanoc.gd" id="3_mhnvy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3eks"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
+
+[node name="EmotionalCutscene" type="Control" unique_id=455744426]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1549212627]
+layout_mode = 1
+offset_right = 430.0
+offset_bottom = 258.0
+theme_override_font_sizes/font_size = 44
+text = "Koszmarna
+Noc
+W
+Miliczu"
+
+[node name="ColorRect" type="ColorRect" parent="Label" unique_id=1863750887]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 1)
+
+[node name="Button" type="Button" parent="." unique_id=342897834]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -41.5
+offset_right = 211.0
+offset_bottom = 41.5
+grow_vertical = 2
+pivot_offset = Vector2(1795, -58.5)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mhnvy")
+text = "Graj"
+script = ExtResource("1_vjb58")
+
+[node name="Button2" type="Button" parent="." unique_id=1045229923]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -79.0
+offset_right = 215.0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ytvr")
+text = "Wyjście"
+script = ExtResource("1_yqeox")
+
+[node name="Button3" type="Button" parent="." unique_id=247677178]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = 64.0
+offset_right = 215.0
+offset_bottom = 135.0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g3eks")
+text = "Double Trouble"
+script = ExtResource("3_mhnvy")
+
+[node name="Button4" type="Button" parent="." unique_id=1965478969]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -214.0
+offset_top = -71.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v86rl")
+text = "Opcje"
+script = ExtResource("3_con2f")
