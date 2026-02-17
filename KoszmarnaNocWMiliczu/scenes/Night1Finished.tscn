@@ -11,6 +11,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tubis")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=740970270]
+layout_mode = 0
+offset_left = -39.0
+offset_top = -23.0
+offset_right = 1197.0
+offset_bottom = 691.0
+color = Color(0, 0, 0, 1)
+
 [node name="Label" type="Label" parent="." unique_id=1181746820]
 layout_mode = 1
 anchors_preset = 8
@@ -24,7 +32,7 @@ offset_right = 243.0
 offset_bottom = 135.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 50
 text = "5:59 AM"
 horizontal_alignment = 1
 vertical_alignment = 1
