@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://clqnjfngq8vw7"]
 
+[ext_resource type="Script" uid="uid://do4tvg6k2osmb" path="res://scenes/menuglowne.gd" id="1_4ytvr"]
 [ext_resource type="Script" uid="uid://q5t6qtw3ejdo" path="res://skrypty/noc1.gd" id="1_vjb58"]
 [ext_resource type="Script" uid="uid://gunuh2xwtinv" path="res://skrypty/zamknijgre.gd" id="1_yqeox"]
 [ext_resource type="Script" uid="uid://dhkv2gldf5ewr" path="res://skrypty/przyciskopcjemenu.gd" id="3_con2f"]
@@ -13,13 +14,14 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
 
-[node name="EmotionalCutscene" type="Control" unique_id=455744426]
+[node name="Menu" type="Control" unique_id=455744426]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4ytvr")
 
 [node name="Label" type="Label" parent="." unique_id=1549212627]
 layout_mode = 1
@@ -31,11 +33,11 @@ Noc
 W
 Miliczu"
 
-[node name="ColorRect" type="ColorRect" parent="Label" unique_id=1863750887]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1863750887]
 show_behind_parent = true
 layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 647.0
+offset_right = 1491.0
+offset_bottom = 729.0
 color = Color(0, 0, 0, 1)
 
 [node name="Button" type="Button" parent="." unique_id=342897834]

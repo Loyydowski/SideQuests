@@ -1,14 +1,10 @@
 [gd_scene format=3 uid="uid://cmmnc0pibmtvl"]
 
-[node name="PanelTelefonu" type="Control"]
+[node name="PanelTelefonu" type="Control" unique_id=902232083]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1447336581]
 layout_mode = 1
 offset_right = 320.46265
 offset_bottom = 456.93945

@@ -22,6 +22,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 UstawieniaManager="*res://skrypty/ustawienia_manager.gd"
+Global="*uid://bxdcunaj3ef23"
+EscMenu="*uid://ct2q2b2vw2q58"
 
 [gui]
 

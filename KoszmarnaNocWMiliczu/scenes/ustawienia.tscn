@@ -15,8 +15,8 @@ script = ExtResource("1_01rqy")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1502799591]
 show_behind_parent = true
 layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 647.0
+offset_right = 1314.0
+offset_bottom = 734.0
 color = Color(0, 0, 0, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=493470858]
@@ -37,6 +37,7 @@ theme_override_constants/separation = 15
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=693377643]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "USTAWIENIA"
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1618593012]
@@ -44,6 +45,7 @@ layout_mode = 2
 
 [node name="Label2" type="Label" parent="VBoxContainer" unique_id=1581489729]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "GRAFIKA "
 
 [node name="KontenerRozdzielczosc" type="HBoxContainer" parent="VBoxContainer" unique_id=509482499]
@@ -71,6 +73,7 @@ layout_mode = 2
 
 [node name="Label3" type="Label" parent="VBoxContainer" unique_id=1035803504]
 layout_mode = 2
+theme_override_font_sizes/font_size = 25
 text = "DŹWIĘK "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=221914697]
@@ -123,9 +126,11 @@ layout_mode = 2
 
 [node name="PrzyciskZapisz" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=911394425]
 layout_mode = 2
+theme_override_font_sizes/font_size = 23
 text = "Zapisz"
 
 [node name="PrzyciskPowrot" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1836372240]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Menu"
 script = ExtResource("2_p0n22")
