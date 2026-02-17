@@ -12,7 +12,7 @@ script = ExtResource("1_g2els")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="flashlight" type="SpotLight3D" parent="Camera3D" unique_id=314618848]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.08)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0377977)
 visible = false
 shadow_enabled = true
 spot_range = 3.0

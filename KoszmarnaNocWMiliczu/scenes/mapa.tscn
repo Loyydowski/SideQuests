@@ -15,7 +15,18 @@ albedo_color = Color(0.9788858, 0.88694847, 0.19580597, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrd35"]
 albedo_color = Color(0.4224196, 0.62908435, 0.16144142, 1)
 
-[sub_resource type="Environment" id="Environment_nrd35"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nrd35"]
+
+[sub_resource type="Sky" id="Sky_atgyb"]
+sky_material = SubResource("ProceduralSkyMaterial_nrd35")
+
+[sub_resource type="Environment" id="Environment_k7lwh"]
+background_mode = 2
+background_energy_multiplier = 0.02
+sky = SubResource("Sky_atgyb")
+ambient_light_source = 3
+ambient_light_energy = 0.1
+volumetric_fog_ambient_inject = 0.1
 
 [node name="Mapa" type="Node3D" unique_id=2144167531]
 
@@ -48,9 +59,9 @@ size = Vector3(25.592773, 3.3592453, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D4" unique_id=1482719328]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.34951723, 0.6551735, 0.004463136)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.34951723, 0.3856852, 0.004463136)
 operation = 2
-size = Vector3(0.10369849, 1.1074371, 1.6909112)
+size = Vector3(0.10369849, 1.1613483, 1.6909112)
 material = SubResource("StandardMaterial3D_tfnl5")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D4" unique_id=1008249512]
@@ -115,4 +126,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13180983, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2350225, -0.11881149, 2.3939912)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1356060066]
-environment = SubResource("Environment_nrd35")
+environment = SubResource("Environment_k7lwh")
