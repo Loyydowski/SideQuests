@@ -1,6 +1,6 @@
 extends Control
 
-# Dialogi - tablica słowników
+# --- DANE ---
 var dialogs: Array[Dictionary] = [
 	{"speaker": "Strażnik", "text": "Stój! Kim jesteś?"},
 	{"speaker": "Gracz", "text": "Jestem podróżnikiem szukającym schronienia."},
@@ -9,21 +9,24 @@ var dialogs: Array[Dictionary] = [
 	{"speaker": "Strażnik", "text": "Zgadzasz się?", "show_choice": true}
 ]
 
-# Dialogi po wyborze TAK
 var dialogs_yes: Array[Dictionary] = [
 	{"speaker": "Gracz", "text": "Dobrze, zostawiam miecz."},
 	{"speaker": "Strażnik", "text": "Mądra decyzja. Wejdź."},
 ]
 
-# Dialogi po wyborze NIE
 var dialogs_no: Array[Dictionary] = [
 	{"speaker": "Gracz", "text": "Nie ma mowy! Mój miecz zostaje przy mnie."},
 	{"speaker": "Strażnik", "text": "W takim razie odejdź. Nie ma tu dla ciebie miejsca."},
 ]
 
+# --- ZMIENNE STANU ---
 var current_index: int = 0
 var current_dialogs: Array[Dictionary] = []
 var is_choice_visible: bool = false
+var tween: Tween # Obiekt do obsługi animacji
+
+# Konfiguracja prędkości (czas w sekundach na jedną literę)
+var typing_speed: float = 0.05 
 
 @onready var dialog_panel: PanelContainer = $DialogPanel
 @onready var speaker_label: Label = $DialogPanel/MarginContainer/VBoxContainer/SpeakerLabel
@@ -34,29 +37,30 @@ var is_choice_visible: bool = false
 @onready var continue_hint: Label = $ContinueHint
 
 func _ready() -> void:
-	# Podłącz sygnały przycisków
 	yes_button.pressed.connect(_on_yes_pressed)
 	no_button.pressed.connect(_on_no_pressed)
 	
-	# Ukryj panel wyboru na start
 	choice_panel.visible = false
+	continue_hint.visible = false # Ukrywamy hint na starcie
 	
-	# Ustaw początkowe dialogi
 	current_dialogs = dialogs
-	
-	# Pokaż pierwszy dialog
 	show_dialog()
 
 func _input(event: InputEvent) -> void:
-	# Kliknięcie lub spacja przechodzi do następnego dialogu
-	if event.is_action_pressed("ui_accept") or event is InputEventMouseButton:
-		if event is InputEventMouseButton and not event.pressed:
-			return
+	if event.is_action_pressed("ui_accept") or (event is InputEventMouseButton and event.pressed):
 		
-		# Nie przechodź dalej jeśli widoczny jest wybór
+		# 1. Jeśli jest wybór, ignoruj input (gracz musi kliknąć przycisk UI)
 		if is_choice_visible:
 			return
-			
+
+		# 2. Jeśli tekst się jeszcze pisze -> Pomiń animację (pokaż całość)
+		if tween and tween.is_running():
+			tween.kill() # Zatrzymaj tweena
+			dialog_label.visible_ratio = 1.0 # Pokaż cały tekst
+			_on_typing_finished() # Wywołaj funkcję kończącą
+			return
+
+		# 3. Jeśli tekst jest już cały -> Idź do następnego
 		next_dialog()
 
 func show_dialog() -> void:
@@ -66,11 +70,30 @@ func show_dialog() -> void:
 	
 	var dialog = current_dialogs[current_index]
 	
-	# Ustaw tekst
+	# Ustaw tekst i mówcę
 	speaker_label.text = dialog["speaker"]
 	dialog_label.text = dialog["text"]
 	
-	# Sprawdź czy pokazać wybór
+	# --- ANIMACJA PISANIA ---
+	dialog_label.visible_ratio = 0.0 # Ukryj tekst na początku
+	continue_hint.visible = false # Ukryj strzałkę "dalej" podczas pisania
+	
+	# Oblicz czas trwania zależnie od długości tekstu
+	var duration = dialog["text"].length() * typing_speed
+	
+	# Utwórz i uruchom Tween
+	if tween: tween.kill() # Zabij poprzedni tween, jeśli istnieje
+	tween = create_tween()
+	tween.tween_property(dialog_label, "visible_ratio", 1.0, duration)
+	
+	# Gdy animacja się skończy, wywołaj funkcję pomocniczą
+	tween.finished.connect(_on_typing_finished)
+
+# Wywoływane gdy tekst skończy się pisać (sam lub przez pominięcie)
+func _on_typing_finished() -> void:
+	var dialog = current_dialogs[current_index]
+	
+	# Sprawdź czy pokazać wybór CZY strzałkę "dalej"
 	if dialog.get("show_choice", false):
 		show_choice()
 	else:
@@ -84,8 +107,6 @@ func show_choice() -> void:
 	is_choice_visible = true
 	choice_panel.visible = true
 	continue_hint.visible = false
-	
-	# Focus na przycisku Tak
 	yes_button.grab_focus()
 
 func _on_yes_pressed() -> void:
@@ -109,9 +130,5 @@ func switch_to_dialogs(new_dialogs: Array[Dictionary]) -> void:
 
 func end_cutscene() -> void:
 	print("Cutscenka zakończona!")
-	# Tutaj możesz:
-	# get_tree().change_scene_to_file("res://main_game.tscn")
-	# lub queue_free()
-	# lub emit sygnał
 	dialog_panel.visible = false
 	continue_hint.text = "Koniec cutscenki"

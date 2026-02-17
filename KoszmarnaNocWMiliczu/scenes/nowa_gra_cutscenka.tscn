@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://d6i1pvhun2sg"]
+
+[ext_resource type="Script" uid="uid://hoomqlkwrmgi" path="res://skrypty/pierwszacutscenka.gd" id="1_fplbu"]
+[ext_resource type="Shader" uid="uid://taksdllyfs4b" path="res://shadery/blur.gdshader" id="2_doc0x"]
+[ext_resource type="Texture2D" uid="uid://dhif35ick5go6" path="res://assets/OBRAZKI/przedzial-w-pociagu.jpg" id="2_olkuh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ydv3m"]
+shader = ExtResource("2_doc0x")
+shader_parameter/blur_amount = 4.0
+
+[node name="NowaGraCutscene" type="Control" unique_id=1413472847]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fplbu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1083908769]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -990.0
+offset_top = -578.0
+offset_right = 1103.0
+offset_bottom = 621.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ContinueHint" type="Label" parent="." unique_id=1608814960]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Kliknij aby kontynuować..."
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1978580298]
+material = SubResource("ShaderMaterial_ydv3m")
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -987.0
+offset_top = -249.00002
+offset_right = 1471.8237
+offset_bottom = 1157.1177
+grow_horizontal = 2
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_olkuh")

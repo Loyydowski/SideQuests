@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://f0hy5nkdtxa6" path="res://skrypty/gracz.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://bu4nhscqee63o" path="res://skrypty/graczgui.gd" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://dosw5bnllaete" path="res://scenes/camera.tscn" id="3_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://cmmnc0pibmtvl" path="res://scenes/panel_telefonu.tscn" id="4_dqkch"]
 
 [node name="Player" type="Node3D" unique_id=391121884]
 script = ExtResource("1_g2els")
@@ -26,25 +25,20 @@ offset_right = 1150.0
 offset_bottom = 641.0
 script = ExtResource("2_qhqgy")
 
-[node name="PanelTelefonu" parent="CanvasLayer/UI" unique_id=2016774536 instance=ExtResource("4_dqkch")]
-layout_mode = 1
-offset_left = 221.5
-offset_right = 221.5
-
 [node name="RightButton" type="Button" parent="CanvasLayer/UI" unique_id=1824847751]
 layout_mode = 0
 offset_left = 967.0
-offset_top = 227.0
+offset_top = 146.0
 offset_right = 1154.0
-offset_bottom = 380.0
+offset_bottom = 496.0
 text = "W prawo"
 
 [node name="LeftButton" type="Button" parent="CanvasLayer/UI" unique_id=1554963272]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 220.0
+offset_top = 156.0
 offset_right = 188.0
-offset_bottom = 373.0
+offset_bottom = 506.0
 text = "W lewo"
 
 [node name="PanelKamer" parent="CanvasLayer/UI" unique_id=1359527877 instance=ExtResource("3_qhqgy")]
@@ -66,14 +60,3 @@ anchor_right = 1.0
 offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
-
-[node name="TelefonPrzycisk" type="Button" parent="CanvasLayer/UI" unique_id=1513163462]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -353.5
-offset_right = 353.5
-offset_bottom = 113.0
-grow_horizontal = 2
-text = "Telefon"
