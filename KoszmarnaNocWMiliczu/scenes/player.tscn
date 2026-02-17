@@ -11,6 +11,12 @@ script = ExtResource("1_g2els")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=983793085]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
+[node name="flashlight" type="SpotLight3D" parent="Camera3D" unique_id=314618848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.08)
+visible = false
+shadow_enabled = true
+spot_range = 3.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1231713893]
 
 [node name="UI" type="Control" parent="CanvasLayer" unique_id=1955995219]

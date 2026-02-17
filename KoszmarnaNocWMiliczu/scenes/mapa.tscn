@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci3nnxf6y46dh"]
+[gd_scene format=3 uid="uid://ci3nnxf6y46dh"]
 
 [ext_resource type="PackedScene" uid="uid://b2lc2kkf42pyv" path="res://assets/Computer Desk.FBX" id="1_ekubr"]
 [ext_resource type="PackedScene" uid="uid://o5ykihaglcic" path="res://scenes/player.tscn" id="2_u1vf7"]
@@ -15,99 +15,104 @@ albedo_color = Color(0.9788858, 0.88694847, 0.19580597, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrd35"]
 albedo_color = Color(0.4224196, 0.62908435, 0.16144142, 1)
 
-[node name="Mapa" type="Node3D"]
+[sub_resource type="Environment" id="Environment_nrd35"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="Mapa" type="Node3D" unique_id=2144167531]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=191020831]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.527805, 0, 2.843134)
 size = Vector3(26.319347, 0.1, 17.015137)
 material = SubResource("StandardMaterial3D_u1vf7")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=467814929]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3656178, 0.76856416, 1.3232642)
 operation = 2
 size = Vector3(11.665039, 3.691162, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D2"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D2" unique_id=848083309]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0579567, 0.16786379, -0.013354659)
 operation = 2
 size = Vector3(1.2314453, 2.734253, 0.36619726)
 material = SubResource("StandardMaterial3D_tfnl5")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1606912077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6853905, 0.67177004, -4.4783764)
 size = Vector3(10.666, 3.7420654, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=402250585]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.56048316, 1.0906014, -1.4431965)
 operation = 2
 size = Vector3(25.592773, 3.3592453, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D4"]
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D4" unique_id=1482719328]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.34951723, 0.6551735, 0.004463136)
 operation = 2
 size = Vector3(0.10369849, 1.1074371, 1.6909112)
 material = SubResource("StandardMaterial3D_tfnl5")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D4"]
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D4" unique_id=1008249512]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.998131, -0.14831543, -2.9802322e-07)
 operation = 2
 size = Vector3(1.0714111, 1.9602051, 1)
 material = SubResource("StandardMaterial3D_atgyb")
 
-[node name="Computer Desk" parent="." instance=ExtResource("1_ekubr")]
+[node name="Computer Desk" parent="." unique_id=1473904740 instance=ExtResource("1_ekubr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05280119, -1.8691244)
 
-[node name="Node3D" type="Node3D" parent="Computer Desk"]
+[node name="Node3D" type="Node3D" parent="Computer Desk" unique_id=896806799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85746664, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Computer Desk/Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Computer Desk/Node3D" unique_id=548872679]
 
-[node name="Player" parent="." instance=ExtResource("2_u1vf7")]
+[node name="Player" parent="." unique_id=1292747268 instance=ExtResource("2_u1vf7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.289, 0.32868788, -1.841)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=1047304736]
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -6.7007384, 0.49778152, 1.4539218)
 operation = 2
 size = Vector3(17.628841, 4.4310436, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D6"]
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D6" unique_id=906801881]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9612807, 0.7629931, 9.536743e-07)
 operation = 2
 size = Vector3(2.696289, 2.2136688, 1)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=963667811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.568138, 0.0020446777, -2.4115295)
 size = Vector3(15.995651, 0.08355713, 27.017578)
 material = SubResource("StandardMaterial3D_nrd35")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1958500081]
 transform = Transform3D(11.035, 0, 0, 0, -4.823552e-07, 11.035, 0, -11.035, -4.823552e-07, -0.30143976, 2.414351, -1.3189805)
 directional_shadow_max_distance = 50.7
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1473084776]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1258206, 2.5656748, -1.8184664)
 size = Vector3(7.462219, 0.09820557, 6.3120575)
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Node3D" type="Node3D" parent="." unique_id=1953091208]
 transform = Transform3D(-3.9340248e-10, 0.009, 0, 3.9340248e-10, 1.7196168e-17, 0.009, 0.009, 3.9340248e-10, -3.9340248e-10, -2.021, 1.2, 1.927)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1181635514]
 transform = Transform3D(0.9999998, -7.1054274e-15, 7.1054274e-15, 7.1054274e-15, 0.9999998, -2.1175824e-22, -7.1054274e-15, -4.2351647e-22, 0.9999998, 0, 0, -20.954582)
 mesh = ExtResource("3_tfnl5")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1196953715]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14700907, 2.398302, 2.4127617)
 size = Vector3(0.82177734, 0.099823, 2.0909119)
 
-[node name="Node3D2" type="Node3D" parent="."]
+[node name="Node3D2" type="Node3D" parent="." unique_id=2054608998]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7700696, -1.6159339)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2" unique_id=1172283434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13180983, 0)
 
-[node name="Node3D3" parent="." instance=ExtResource("4_nrd35")]
+[node name="Node3D3" parent="." unique_id=121383007 instance=ExtResource("4_nrd35")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2350225, -0.11881149, 2.3939912)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1356060066]
+environment = SubResource("Environment_nrd35")

@@ -3,6 +3,12 @@ extends Node3D
 # === KONFIGURACJA CZASU ===
 @export var czas_calej_nocy: float = 5.0
 
+@onready var flashlight = $Camera3D/flashlight
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_flashlight"):
+		flashlight.visible = !flashlight.visible
+
 # === STAŁE ===
 const GODZINA_START: int = 0
 const GODZINA_KONIEC: int = 6
