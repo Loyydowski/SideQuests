@@ -24,7 +24,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_4ytvr")
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="." unique_id=1549212627]
 layout_mode = 1
@@ -38,7 +37,10 @@ Miliczu"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1863750887]
 show_behind_parent = true
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0590278
+anchor_bottom = 1.191358
 offset_right = 1153.0
 offset_bottom = 651.0
 color = Color(0, 0, 0, 1)
@@ -59,6 +61,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxEmpty_v86rl")
 text = "Opcje"
 script = ExtResource("3_con2f")
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=128765062]
 layout_mode = 1
