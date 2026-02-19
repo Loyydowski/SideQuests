@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d6i1pvhun2sg"]
 
-[ext_resource type="Script" uid="uid://hoomqlkwrmgi" path="res://skrypty/pierwszacutscenka.gd" id="1_fplbu"]
+[ext_resource type="Script" uid="uid://cadoyy2feuu3f" path="res://skrypty/nowa_gra_cutscenka.gd" id="1_doc0x"]
 [ext_resource type="Shader" uid="uid://taksdllyfs4b" path="res://shadery/blur.gdshader" id="2_doc0x"]
 [ext_resource type="Texture2D" uid="uid://dhif35ick5go6" path="res://assets/OBRAZKI/przedzial-w-pociagu.jpg" id="2_olkuh"]
 
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_fplbu")
+script = ExtResource("1_doc0x")
 
 [node name="ScenkaWPociagu" type="Control" parent="." unique_id=378376848]
 visible = false
@@ -85,16 +85,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="TuBedzieDialogBox" type="VBoxContainer" parent="Poczatek" unique_id=145106160]
-layout_mode = 0
-offset_right = 1158.0
-offset_bottom = 648.0
+[node name="DialogPanel" type="PanelContainer" parent="Poczatek" unique_id=1832107351]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 458.0
+offset_right = 856.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 0
 
-[node name="Panel" type="Panel" parent="Poczatek/TuBedzieDialogBox" unique_id=461829261]
+[node name="MarginContainer" type="MarginContainer" parent="Poczatek/DialogPanel" unique_id=1609381096]
 layout_mode = 2
-size_flags_vertical = 8
 
-[node name="Label" type="Label" parent="Poczatek/TuBedzieDialogBox/Panel" unique_id=689454361]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 20.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Poczatek/DialogPanel/MarginContainer" unique_id=886531963]
+layout_mode = 2
+
+[node name="SpeakerLabel" type="Label" parent="Poczatek/DialogPanel/MarginContainer/VBoxContainer" unique_id=105713039]
+layout_mode = 2
+text = "tEST"
+
+[node name="DialogLabel" type="Label" parent="Poczatek/DialogPanel/MarginContainer/VBoxContainer" unique_id=547489399]
+layout_mode = 2
+text = "tEST"
