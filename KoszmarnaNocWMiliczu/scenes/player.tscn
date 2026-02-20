@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://f0hy5nkdtxa6" path="res://skrypty/gracz.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://bu4nhscqee63o" path="res://skrypty/graczgui.gd" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://dosw5bnllaete" path="res://scenes/camera.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dsoh0p7hoeos4" path="res://assets/Cams/420.png" id="4_dqkch"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlg0r"]
+texture = ExtResource("4_dqkch")
 
 [node name="Player" type="Node3D" unique_id=391121884]
 script = ExtResource("1_g2els")
@@ -20,37 +24,60 @@ spot_range = 3.0
 
 [node name="UI" type="Control" parent="CanvasLayer" unique_id=1955995219]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1150.0
-offset_bottom = 641.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -320.5
+offset_right = 575.0
+offset_bottom = 320.5
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_qhqgy")
 
 [node name="RightButton" type="Button" parent="CanvasLayer/UI" unique_id=1824847751]
-layout_mode = 0
-offset_left = 967.0
-offset_top = 146.0
-offset_right = 1154.0
-offset_bottom = 496.0
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -175.0
+offset_bottom = 175.0
+grow_horizontal = 0
+grow_vertical = 2
 text = "W prawo"
 
 [node name="LeftButton" type="Button" parent="CanvasLayer/UI" unique_id=1554963272]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 156.0
-offset_right = 188.0
-offset_bottom = 506.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -175.0
+offset_right = 187.0
+offset_bottom = 175.0
+grow_vertical = 2
 text = "W lewo"
 
 [node name="PanelKamer" parent="CanvasLayer/UI" unique_id=1359527877 instance=ExtResource("3_qhqgy")]
 layout_mode = 1
 
 [node name="CameraButton" type="Button" parent="CanvasLayer/UI" unique_id=439264694]
-layout_mode = 0
-offset_left = 221.0
-offset_top = 530.0
-offset_right = 928.0
-offset_bottom = 643.0
-text = "Kamery"
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -353.5
+offset_top = -113.0
+offset_right = 353.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qlg0r")
 
 [node name="Godzina" type="Label" parent="CanvasLayer/UI" unique_id=1910120003]
 layout_mode = 1

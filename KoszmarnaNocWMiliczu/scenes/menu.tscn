@@ -5,14 +5,15 @@
 [ext_resource type="Script" uid="uid://gunuh2xwtinv" path="res://skrypty/zamknijgre.gd" id="1_yqeox"]
 [ext_resource type="Script" uid="uid://dhkv2gldf5ewr" path="res://skrypty/przyciskopcjemenu.gd" id="3_con2f"]
 [ext_resource type="Script" uid="uid://dw14ahau0r5xa" path="res://skrypty/specjalnanoc.gd" id="3_mhnvy"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
+[ext_resource type="AudioStream" uid="uid://dbo2u3paqn36s" path="res://assets/OST/1.MainMenu.mp3" id="6_g3eks"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3eks"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
 
 [node name="Menu" type="Control" unique_id=455744426]
 layout_mode = 3
@@ -26,6 +27,7 @@ size_flags_vertical = 4
 script = ExtResource("1_4ytvr")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1463888781]
+modulate = Color(0.3854925, 0.38549247, 0.38549247, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,13 +37,53 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=1549212627]
 layout_mode = 1
-offset_right = 430.0
-offset_bottom = 258.0
-theme_override_font_sizes/font_size = 44
+offset_right = 265.0
+offset_bottom = 217.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 54
 text = "Koszmarna
 Noc
 W
 Miliczu"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=515483060]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -326.0
+offset_right = 298.0
+offset_bottom = 326.0
+grow_vertical = 2
+theme_override_constants/margin_top = 300
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=128765062]
+layout_mode = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=342897834]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mhnvy")
+text = "Graj"
+script = ExtResource("1_vjb58")
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=247677178]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g3eks")
+text = "Double Trouble"
+script = ExtResource("3_mhnvy")
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1045229923]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ytvr")
+text = "Wyjście"
+script = ExtResource("1_yqeox")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1863750887]
 show_behind_parent = true
@@ -51,6 +93,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Button4" type="Button" parent="." unique_id=1965478969]
@@ -64,39 +107,12 @@ offset_left = -165.0
 offset_top = -30.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxEmpty_v86rl")
 text = "Opcje"
 script = ExtResource("3_con2f")
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=128765062]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.38271606
-anchor_right = 0.23003472
-anchor_bottom = 0.61728394
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=342897834]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxEmpty_mhnvy")
-text = "Graj"
-script = ExtResource("1_vjb58")
-
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=247677178]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxEmpty_g3eks")
-text = "Double Trouble"
-script = ExtResource("3_mhnvy")
-
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1045229923]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxEmpty_4ytvr")
-text = "Wyjście"
-script = ExtResource("1_yqeox")
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1368654477]
+stream = ExtResource("6_g3eks")
+parameters/looping = true

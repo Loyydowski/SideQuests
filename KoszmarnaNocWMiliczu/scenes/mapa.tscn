@@ -31,14 +31,14 @@ volumetric_fog_ambient_inject = 0.1
 [node name="Mapa" type="Node3D" unique_id=2144167531]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=191020831]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.527805, 0, 2.843134)
-size = Vector3(26.319347, 0.1, 17.015137)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.527805, 0, 9.526606)
+size = Vector3(26.319347, 0.1, 30.38208)
 material = SubResource("StandardMaterial3D_u1vf7")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=467814929]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3656178, 0.76856416, 1.3232642)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2940097, 0.76856416, 1.3232642)
 operation = 2
-size = Vector3(11.665039, 3.691162, 0.081)
+size = Vector3(13.807861, 3.691162, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D2" unique_id=848083309]
@@ -48,8 +48,8 @@ size = Vector3(1.2314453, 2.734253, 0.36619726)
 material = SubResource("StandardMaterial3D_tfnl5")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1606912077]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6853905, 0.67177004, -4.4783764)
-size = Vector3(10.666, 3.7420654, 0.081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3506775, 0.67177004, -4.4783764)
+size = Vector3(13.996574, 3.7420654, 0.081)
 material = SubResource("StandardMaterial3D_tfnl5")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=402250585]
@@ -113,8 +113,13 @@ transform = Transform3D(0.9999998, -7.1054274e-15, 7.1054274e-15, 7.1054274e-15,
 mesh = ExtResource("3_tfnl5")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1196953715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14700907, 2.398302, 2.4127617)
-size = Vector3(0.82177734, 0.099823, 2.0909119)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.731989, 2.398302, 6.450905)
+size = Vector3(12.579773, 0.099823, 10.167198)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGBox3D8" unique_id=266836065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3862414, -0.057146072, -2.7318025)
+operation = 2
+size = Vector3(8.637688, 0.35655212, 7.801612)
 
 [node name="Node3D2" type="Node3D" parent="." unique_id=2054608998]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7700696, -1.6159339)
@@ -127,3 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2350225, -0.11881149, 2.39
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1356060066]
 environment = SubResource("Environment_k7lwh")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1903070879]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8032227, 1.3667421, 8.010618)
+size = Vector3(4.6064453, 2.722168, 0.091308594)

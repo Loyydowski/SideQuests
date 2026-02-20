@@ -3,9 +3,7 @@ extends Control
 @onready var left_button: Button = $LeftButton
 @onready var right_button: Button = $RightButton
 @onready var camera_button: Button = $CameraButton
-@onready var phone_button: Button = $TelefonPrzycisk
 @onready var panel_kamer: Control = $PanelKamer
-@onready var panel_telefonu: Control = $PanelTelefonu
 @onready var godzina_label: Label = $Godzina
 @onready var player: Node3D = get_node("../..")
 @onready var camera: Camera3D = player.get_node("Camera3D")
@@ -33,16 +31,10 @@ func _ready():
 	
 	if camera_button:
 		camera_button.mouse_entered.connect(_on_camera_hovered)
-	
-	if phone_button:
-		phone_button.mouse_entered.connect(_on_phone_hovered)
+
 	
 	if panel_kamer:
 		panel_kamer.visible = false
-	
-	if panel_telefonu:
-		panel_telefonu.visible = false
-	
 	update_buttons()
 
 
@@ -102,9 +94,7 @@ func update_buttons():
 		left_button.visible = false
 		right_button.visible = false
 		panel_kamer.visible = true
-		panel_telefonu.visible = false
 		camera_button.visible = true
-		phone_button.visible = false
 		move_child(camera_button, -1)
 		return
 	
@@ -113,17 +103,12 @@ func update_buttons():
 		left_button.visible = false
 		right_button.visible = false
 		panel_kamer.visible = false
-		panel_telefonu.visible = true
 		camera_button.visible = false
-		phone_button.visible = true
-		move_child(phone_button, -1)
 		return
 	
 	# === NIC NIE AKTYWNE ===
 	panel_kamer.visible = false
-	panel_telefonu.visible = false
 	camera_button.visible = true
-	phone_button.visible = true
 	left_button.visible = player.odwrocony
 	left_button.disabled = !player.odwrocony
 	right_button.visible = !player.odwrocony

@@ -1,73 +1,75 @@
 extends Control
 
-const SOUND_PATH = "res://assets/OST/zapowiedzINTERCITY.wav"
+# Upewnij się, że ta ścieżka dokładnie odpowiada lokalizacji Twojej sceny w projekcie!
+const NEXT_SCENE_PATH = "res://scenes//nowa_gra_cutscene_wpociagu.tscn"
 
-# Pobieramy odniesienia do węzłów tekstowych na podstawie Twojego zrzutu ekranu
-@onready var dialog_panel = $Poczatek/DialogPanel
-@onready var speaker_label = $Poczatek/DialogPanel/MarginContainer/VBoxContainer/SpeakerLabel
-@onready var dialog_label = $Poczatek/DialogPanel/MarginContainer/VBoxContainer/DialogLabel
+# Szybkość pisania: czas (w sekundach) na pojawienie się jednego znaku
+const TYPING_SPEED = 0.05 
 
-# Baza naszych dialogów - możesz je tu łatwo modyfikować
+@onready var dialog_panel = %DialogPanel
+@onready var speaker_label = $MarginContainer/VBoxContainer/SpeakerLabel
+@onready var dialog_label = %DialogPanel/DialogLabel
+
 var dialogs = [
-	{"speaker": "Pasażer", "text": "Przepraszam, czy to miejsce jest wolne?"},
-	{"speaker": "Bohater", "text": "Tak, oczywiście. Proszę siadać."}
+	{"speaker": "Bartek", "text": "Przepraszam, czy to miejsce jest wolne?"},
+	{"speaker": "Bartek", "text": "Tak, oczywiście. Proszę siadać."}
 ]
 
 var current_dialog_index = 0
 var is_dialog_active = true
+var typing_tween: Tween
 
 func _ready() -> void:
-	# Wyświetlamy pierwszą linię dialogu natychmiast po uruchomieniu sceny
 	update_dialog_ui()
 
 func _input(event: InputEvent) -> void:
-	# Reagujemy tylko wtedy, gdy dialog nadal trwa
 	if not is_dialog_active:
 		return
 		
-	# Sprawdzamy, czy gracz kliknął Lewy Przycisk Myszy (LPM) lub wcisnął Enter/Spację (domyślne "ui_accept")
 	var is_mouse_click = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed
+	
 	if event.is_action_pressed("ui_accept") or is_mouse_click:
-		advance_dialog()
+		# Jeśli tekst wciąż się "pisze", kliknięcie od razu pokaże cały tekst
+		if typing_tween and typing_tween.is_running():
+			typing_tween.kill()
+			dialog_label.visible_characters = -1 # -1 oznacza pokazanie wszystkich znaków
+		else:
+			# Jeśli cały tekst jest już widoczny, przejdź do następnego dialogu
+			advance_dialog()
 
 func advance_dialog() -> void:
 	current_dialog_index += 1
 	
-	# Jeśli są jeszcze jakieś dialogi w liście, pokaż następny
 	if current_dialog_index < dialogs.size():
 		update_dialog_ui()
 	else:
-		# W przeciwnym razie zakończ sekwencję dialogową
 		end_dialogs()
 
 func update_dialog_ui() -> void:
-	# Podmiana tekstu w węzłach Label
 	speaker_label.text = dialogs[current_dialog_index]["speaker"]
 	dialog_label.text = dialogs[current_dialog_index]["text"]
+	
+	# Zresetuj widoczność znaków do zera przed rozpoczęciem animacji
+	dialog_label.visible_characters = 0
+	
+	# Zatrzymaj poprzednią animację (jeśli jakaś dziwnym trafem nadal działa)
+	if typing_tween:
+		typing_tween.kill()
+		
+	# Tworzymy nową animację (Tween) dla efektu pisania
+	typing_tween = create_tween()
+	var text_length = dialog_label.get_total_character_count()
+	var duration = text_length * TYPING_SPEED
+	
+	# Płynnie zwiększamy liczbę widocznych znaków od 0 do całkowitej długości tekstu
+	typing_tween.tween_property(dialog_label, "visible_characters", text_length, duration)
 
 func end_dialogs() -> void:
 	is_dialog_active = false
-	dialog_panel.hide() # Ukrywamy całe szare okno dialogowe
 	
-	# Rozpoczynamy odliczanie do zapowiedzi pociągu
-	start_train_announcement()
-
-func start_train_announcement() -> void:
-	# Odczekaj 5 sekund
-	await get_tree().create_timer(5.0).timeout
-	# Odtwórz dźwięk
-	play_sound(SOUND_PATH)
-
-func play_sound(path: String) -> void:
-	if not ResourceLoader.exists(path):
-		print("BŁĄD: Nie znaleziono pliku: ", path)
-		return
-
-	var player = AudioStreamPlayer.new()
-	add_child(player) 
+	# Przeniesienie do nowej sceny
+	var error = get_tree().change_scene_to_file(NEXT_SCENE_PATH)
 	
-	var stream = load(path)
-	player.stream = stream
-	player.play()
-	
-	player.finished.connect(player.queue_free)
+	# Opcjonalnie: proste sprawdzenie błędów dla ścieżki
+	if error != OK:
+		print("BŁĄD: Nie można załadować sceny: ", NEXT_SCENE_PATH)

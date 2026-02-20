@@ -4,8 +4,10 @@ extends Control
 @onready var texture_rect = $TextureRect
 var frames: Array[Texture2D] = []
 var current_frame_index: int = 0
+@onready var music = $Music
 
 func _ready() -> void:
+	music.play()
 	# Twój kod: ukrywamy przycisk na start
 	%Button3.visible = false
 	

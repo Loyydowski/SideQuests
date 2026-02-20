@@ -8,7 +8,7 @@
 shader = ExtResource("2_doc0x")
 shader_parameter/blur_amount = 4.0
 
-[node name="NowaGraCutscene" type="Control" unique_id=1413472847]
+[node name="NowaGraCutscene1" type="Control" unique_id=1413472847]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +16,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_doc0x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1202608428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="ScenkaWPociagu" type="Control" parent="." unique_id=378376848]
 visible = false
@@ -67,50 +76,29 @@ grow_horizontal = 2
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_olkuh")
 
-[node name="Poczatek" type="Control" parent="." unique_id=1018194748]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ColorRect" type="ColorRect" parent="Poczatek" unique_id=1202608428]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1609381096]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -344.0
-offset_top = -386.0
-offset_right = 1503.0
-offset_bottom = 762.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="DialogPanel" type="PanelContainer" parent="Poczatek" unique_id=1832107351]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(600, 150)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 256.0
-offset_top = 458.0
-offset_right = 856.0
-offset_bottom = 608.0
+offset_top = -174.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="Poczatek/DialogPanel" unique_id=1609381096]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=886531963]
 layout_mode = 2
+size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Poczatek/DialogPanel/MarginContainer" unique_id=886531963]
-layout_mode = 2
-
-[node name="SpeakerLabel" type="Label" parent="Poczatek/DialogPanel/MarginContainer/VBoxContainer" unique_id=105713039]
+[node name="SpeakerLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=105713039]
 layout_mode = 2
 text = "tEST"
 
-[node name="DialogLabel" type="Label" parent="Poczatek/DialogPanel/MarginContainer/VBoxContainer" unique_id=547489399]
+[node name="DialogPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1832107351]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 2
+
+[node name="DialogLabel" type="Label" parent="MarginContainer/VBoxContainer/DialogPanel" unique_id=547489399]
 layout_mode = 2
 text = "tEST"
