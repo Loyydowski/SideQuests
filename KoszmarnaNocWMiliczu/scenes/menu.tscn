@@ -25,6 +25,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_4ytvr")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1463888781]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Label" type="Label" parent="." unique_id=1549212627]
 layout_mode = 1
 offset_right = 430.0
@@ -38,13 +46,12 @@ Miliczu"
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1863750887]
 show_behind_parent = true
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0590278
-anchor_bottom = 1.191358
-offset_right = 1153.0
-offset_bottom = 651.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="Button4" type="Button" parent="." unique_id=1965478969]
 layout_mode = 1
