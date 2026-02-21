@@ -85,6 +85,8 @@ anchor_bottom = 1.0
 offset_top = -174.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.4, 1.4)
+theme_override_constants/margin_bottom = 68
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=886531963]
 layout_mode = 2
@@ -98,7 +100,8 @@ text = "tEST"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(600, 150)
 layout_mode = 2
+size_flags_vertical = 8
 
-[node name="DialogLabel" type="Label" parent="MarginContainer/VBoxContainer/DialogPanel" unique_id=547489399]
+[node name="DialogLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/DialogPanel" unique_id=1778038742]
 layout_mode = 2
 text = "tEST"

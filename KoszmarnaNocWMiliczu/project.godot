@@ -17,6 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="KoszmarnaNocZMarcinem"
 run/main_scene="uid://clqnjfngq8vw7"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -24,6 +25,10 @@ config/icon="res://icon.svg"
 UstawieniaManager="*res://skrypty/ustawienia_manager.gd"
 Global="*uid://bxdcunaj3ef23"
 EscMenu="*uid://ct2q2b2vw2q58"
+
+[display]
+
+window/size/viewport_height=1080
 
 [gui]
 

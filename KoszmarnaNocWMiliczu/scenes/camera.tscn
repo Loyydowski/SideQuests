@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dosw5bnllaete"]
 
-[node name="Camera" type="Control"]
+[node name="Camera" type="Control" unique_id=1592327066]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -8,16 +8,71 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=363125962]
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 651.0
 color = Color(0, 0, 0, 1)
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 979.0
-offset_top = 476.0
-offset_right = 1131.0
-offset_bottom = 543.0
+[node name="VBoxContainer" type="Control" parent="." unique_id=1432768137]
+anchors_preset = 0
+offset_left = 675.0
+offset_top = 159.0
+offset_right = 1152.0
+offset_bottom = 480.0
+
+[node name="CAM1" type="Button" parent="VBoxContainer" unique_id=1264989344]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.5
+offset_right = 26.5
+offset_bottom = 28.0
+grow_horizontal = 2
 text = "CAM 1"
+
+[node name="CAM2" type="Button" parent="VBoxContainer" unique_id=436959158]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -14.0
+offset_right = 26.5
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "CAM 2"
+
+[node name="CAM3" type="Button" parent="VBoxContainer" unique_id=1050823381]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.5
+offset_top = -28.0
+offset_right = 26.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "CAM 3"
+
+[node name="CAM4" type="Button" parent="VBoxContainer" unique_id=1116047538]
+z_index = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -14.0
+offset_right = 53.0
+offset_bottom = 14.0
+grow_vertical = 2
+text = "CAM 4"

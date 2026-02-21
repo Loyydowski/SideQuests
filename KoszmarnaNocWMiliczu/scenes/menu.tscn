@@ -26,6 +26,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_4ytvr")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1863750887]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1463888781]
 modulate = Color(0.3854925, 0.38549247, 0.38549247, 1)
 layout_mode = 1
@@ -35,10 +46,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=1549212627]
-layout_mode = 1
-offset_right = 265.0
-offset_bottom = 217.0
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=844202030]
+layout_mode = 0
+offset_right = 274.0
+offset_bottom = 270.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="Label" type="Label" parent="MarginContainer2" unique_id=1549212627]
+layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 54
@@ -80,21 +96,11 @@ script = ExtResource("3_mhnvy")
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1045229923]
 layout_mode = 2
+mouse_behavior_recursive = 2
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4ytvr")
 text = "Wyjście"
 script = ExtResource("1_yqeox")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1863750887]
-show_behind_parent = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="Button4" type="Button" parent="." unique_id=1965478969]
 layout_mode = 1
