@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bq1s8rl01lyv4"]
 
+[ext_resource type="Texture2D" uid="uid://dhif35ick5go6" path="res://assets/OBRAZKI/przedzial-w-pociagu.jpg" id="1_7xo72"]
+
 [node name="Control" type="Control" unique_id=459433977]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1276792085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PrzedzialWPociagu" type="Sprite2D" parent="." unique_id=102902319]
+position = Vector2(658, 479)
+texture = ExtResource("1_7xo72")

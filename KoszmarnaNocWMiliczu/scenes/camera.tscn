@@ -5,6 +5,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -11.0
+offset_top = 1.0
+offset_right = -11.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -13,6 +17,8 @@ layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 651.0
 color = Color(0, 0, 0, 1)
+
+[node name="SubViewport" type="SubViewport" parent="ColorRect" unique_id=662171336]
 
 [node name="VBoxContainer" type="Control" parent="." unique_id=1432768137]
 anchors_preset = 0
@@ -76,3 +82,17 @@ offset_right = 53.0
 offset_bottom = 14.0
 grow_vertical = 2
 text = "CAM 4"
+
+[node name="CAM5" type="Button" parent="VBoxContainer" unique_id=566361824]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -53.0
+offset_top = -28.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "CAM 5"
