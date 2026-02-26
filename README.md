@@ -1,3 +1,5 @@
+
+
 <div align="center">
 
 # 🚀 Side Projects
@@ -21,6 +23,7 @@
 - [🎮 Minecraft Client](#-minecraft-client)
 - [⚔️ Minecraft Mod — Loyydowski Craft](#️-minecraft-mod--honkai-craft)
 - [💻 My Own Programming Language](#-my-own-programming-language)
+- [🌙 Koszmarna Noc w Miliczu](#-koszmarna-noc-w-miliczu)
 - [📌 Status projektów](#-status-projektów)
 
 ---
@@ -57,7 +60,7 @@
 | **March 7th** | Mob | Przyjazny mob, który transformuje się w **Eververnight** po uderzeniu |
 | **Fugue** | Mob | Nowy unikalny mob |
 | **SAM** | 💀 Boss | Potężny boss do pokonania |
-| **Light Cone** |Broń | Idk jakaś książeczka do bicia |
+| **Light Cone** | Broń | Idk jakaś książeczka do bicia |
 | **Mem** | 🐾 Pet | Papuga (?) — non-stop puszcza voice line'y |
 
 #### 🎵 Przedmioty
@@ -65,6 +68,8 @@
 | Przedmiot | Typ | Opis |
 |---|---|---|
 | **Hope Is the Thing with Feathers** | 💿 Płyta muzyczna | Nowa płyta do odtworzenia w jukeboxie |
+
+---
 
 ## 💻 My Own Programming Language
 
@@ -74,7 +79,25 @@
 Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach - projekt edukacyjny for fun
 ```
 
+---
 
+## 🌙 Koszmarna Noc w Miliczu
+
+> Autorski projekt — gra / interaktywne doświadczenie osadzone w klimacie horroru.
+
+| Cecha | Szczegóły |
+|---|---|
+| **Gatunek** | 🎃 Horror / Przygodowa |
+| **Lokacja** | Milicz |
+| **Typ** | Własny projekt |
+
+### 🔧 Planowane elementy
+
+- [ ] Fabuła i scenariusz
+- [ ] Projekt postaci i lokacji
+- [ ] Mechaniki rozgrywki / interakcji
+- [ ] Atmosfera — sound design i oprawa wizualna
+- [ ] Grywalna wersja demo
 
 ---
 
@@ -85,6 +108,7 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 | Minecraft Client | 🟡 Planowanie | `▓░░░░░░░░░` 10% |
 | Minecraft Mod — Honkai Craft | 🟡 Planowanie | `▓░░░░░░░░░` 10% |
 | Programming Language | 🔴 Koncept | `░░░░░░░░░░` 0% |
+| Koszmarna Noc w Miliczu | 🔴 Koncept | `░░░░░░░░░░` 0% |
 
 ---
 
@@ -97,5 +121,16 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 ![Forge](https://img.shields.io/badge/Forge-1A1A1A?style=flat-square&logo=curseforge&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-
 </div>
+
+---
+
+Dodałem sekcję **🌙 Koszmarna Noc w Miliczu** z:
+
+- **Opisem** jako autorski projekt w klimacie horroru
+- **Tabelką** z podstawowymi informacjami (gatunek, lokacja, typ)
+- **Listą planowanych elementów** (fabuła, postacie, mechaniki, sound design, demo)
+- **Wpisem w tabeli statusów** jako 🔴 Koncept
+- **Linkiem w spisie treści**
+
+Jeśli chcesz zmienić opis, gatunek albo dodać konkretne szczegóły (np. czy to gra tekstowa, 2D, 3D, film interaktywny) — daj znać!
