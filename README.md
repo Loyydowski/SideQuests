@@ -24,6 +24,9 @@
 - [⚔️ Minecraft Mod — Loyydowski Craft](#️-minecraft-mod--honkai-craft)
 - [💻 My Own Programming Language](#-my-own-programming-language)
 - [🌙 Koszmarna Noc w Miliczu](#-koszmarna-noc-w-miliczu)
+- [🔒 MG / MM](#-mg--mm)
+- [🎭 The Masquerade](#-the-masquerade)
+- [🧠 Brainroty](#-brainroty)
 - [📌 Status projektów](#-status-projektów)
 
 ---
@@ -89,6 +92,7 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 |---|---|
 | **Gatunek** | 🎃 Horror / Przygodowa |
 | **Lokacja** | Milicz |
+| **Silnik** | Godot Engine |
 | **Typ** | Własny projekt |
 
 ### 🔧 Planowane elementy
@@ -101,6 +105,66 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 
 ---
 
+## 🔒 MG / MM
+
+> Druga gra osadzona w Miliczu. Szczegóły objęte tajemnicą.
+
+| Cecha | Szczegóły |
+|---|---|
+| **Lokacja** | Milicz |
+| **Silnik** | Godot Engine |
+| **Typ** | Własny projekt |
+| **Info** | 🤫 *To będzie niespodzianka...* |
+
+```
+⠀⠀⠀❓❓❓
+⠀🔒 CLASSIFIED 🔒
+⠀⠀⠀❓❓❓
+```
+
+---
+
+## 🎭 The Masquerade
+
+> Gra o maskach, tajemnicach i intrygach.
+
+| Cecha | Szczegóły |
+|---|---|
+| **Gatunek** | 🎭 *TBD* |
+| **Język** | Luau |
+| **Typ** | Gra multiplayer |
+
+### 🔧 Planowane elementy
+
+- [ ] Koncept rozgrywki
+- [ ] System masek / ról
+- [ ] Projektowanie map
+- [ ] Skrypty mechanik w Luau
+- [ ] Testowa wersja alpha
+
+---
+
+## 🧠 Brainroty
+
+> Gra inspirowana kulturą brainrot — pure chaos w formie gry.
+
+| Cecha | Szczegóły |
+|---|---|
+| **Gatunek** | 🤯 Chaotyczna / Komediowa |
+| **Silnik** | Godot Engine |
+| **Język** | GDScript |
+| **Typ** | Własny projekt |
+
+### 🔧 Planowane elementy
+
+- [ ] Koncept i chaos design
+- [ ] Mechaniki rozgrywki
+- [ ] Oprawa graficzna w stylu brainrot
+- [ ] Sound design — peak absurd
+- [ ] Grywalna wersja demo
+
+---
+
 ## 📌 Status projektów
 
 | Projekt | Status | Postęp |
@@ -109,6 +173,9 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 | Minecraft Mod — Honkai Craft | 🟡 Planowanie | `▓░░░░░░░░░` 10% |
 | Programming Language | 🔴 Koncept | `░░░░░░░░░░` 0% |
 | Koszmarna Noc w Miliczu | 🔴 Koncept | `░░░░░░░░░░` 0% |
+| MG / MM | 🔒 Tajne | `░░░░░░░░░░` ?% |
+| The Masquerade | 🔴 Koncept | `░░░░░░░░░░` 0% |
+| Brainroty | 🔴 Koncept | `░░░░░░░░░░` 0% |
 
 ---
 
@@ -119,18 +186,11 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Minecraft](https://img.shields.io/badge/Minecraft-62B47A?style=flat-square&logo=minecraft&logoColor=white)
 ![Forge](https://img.shields.io/badge/Forge-1A1A1A?style=flat-square&logo=curseforge&logoColor=white)
+![Godot](https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godotengine&logoColor=white)
+![GDScript](https://img.shields.io/badge/GDScript-355570?style=flat-square&logo=godotengine&logoColor=white)
+![Luau](https://img.shields.io/badge/Luau-00A2FF?style=flat-square&logo=lua&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 </div>
 
 ---
-
-Dodałem sekcję **🌙 Koszmarna Noc w Miliczu** z:
-
-- **Opisem** jako autorski projekt w klimacie horroru
-- **Tabelką** z podstawowymi informacjami (gatunek, lokacja, typ)
-- **Listą planowanych elementów** (fabuła, postacie, mechaniki, sound design, demo)
-- **Wpisem w tabeli statusów** jako 🔴 Koncept
-- **Linkiem w spisie treści**
-
-Jeśli chcesz zmienić opis, gatunek albo dodać konkretne szczegóły (np. czy to gra tekstowa, 2D, 3D, film interaktywny) — daj znać!
