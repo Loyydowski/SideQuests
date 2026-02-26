@@ -35,14 +35,14 @@
 
 | Cecha | Szczegóły |
 |---|---|
-| **Wersja** | `1.8.x` |
+| **Wersja** | `1.8.9` |
 | **Cel** | Zwiększenie FPS i płynności rozgrywki |
 | **Typ** | Custom Launcher / Client |
 
 ### 🔧 Planowane funkcje
 
-- [x] Uruchamianie Minecrafta 1.8
-- [ ] Optymalizacja renderowania — **wzrost FPS**
+- [ ] Uruchamianie Minecrafta 1.8.9
+- [ ] Wgrane domyślnie mody — **wzrost FPS**
 - [ ] Minimalistyczny, czysty interfejs
 - [ ] Lekka baza bez zbędnych modułów
 
@@ -61,7 +61,6 @@
 | **March 7th** | Mob | Przyjazny mob, który transformuje się w **Eververnight** po uderzeniu |
 | **Fugue** | Mob | Nowy unikalny mob |
 | **SAM** | 💀 Boss | Potężny boss do pokonania |
-| **Light Cone** | Broń | Idk jakaś książeczka do bicia |
 | **Mem** | 🐾 Pet | Papuga (?) — non-stop puszcza voice line'y |
 
 #### 🎵 Przedmioty
@@ -69,6 +68,7 @@
 | Przedmiot | Typ | Opis |
 |---|---|---|
 | **Hope Is the Thing with Feathers** | 💿 Płyta muzyczna | Nowa płyta do odtworzenia w jukeboxie |
+| **Light Cone** | Broń | Idk jakaś książeczka do bicia |
 
 ---
 
@@ -84,35 +84,19 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 
 ## 🌙 Koszmarna Noc w Miliczu
 
-> Autorski projekt — gra / interaktywne doświadczenie osadzone w klimacie horroru.
-
-| Cecha | Szczegóły |
-|---|---|
-| **Gatunek** | 🎃 Horror / Przygodowa |
-| **Lokacja** | Milicz |
-| **Silnik** | Godot Engine |
-| **Typ** | Własny projekt |
-
+> Absolutny szczyt komediowy oraz dzieło o którego fabułe będzie zazdrosny sam Scott Cawthon.
 ### 🔧 Planowane elementy
 
 - [ ] Fabuła i scenariusz
 - [ ] Projekt postaci i lokacji
 - [ ] Mechaniki rozgrywki / interakcji
 - [ ] Atmosfera — sound design i oprawa wizualna
-- [ ] Grywalna wersja demo
 
 ---
 
 ## 🔒 MG / MM
 
 > Druga gra osadzona w Miliczu. Szczegóły objęte tajemnicą.
-
-| Cecha | Szczegóły |
-|---|---|
-| **Lokacja** | Milicz |
-| **Silnik** | Godot Engine |
-| **Typ** | Własny projekt |
-| **Info** | 🤫 *To będzie niespodzianka...* |
 
 ```
 ⠀⠀⠀❓❓❓
@@ -124,42 +108,27 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 
 ## 🎭 The Masquerade
 
-> Gra o maskach, tajemnicach i intrygach.
-
-| Cecha | Szczegóły |
-|---|---|
-| **Gatunek** | 🎭 *TBD* |
-| **Język** | Luau |
-| **Typ** | Gra multiplayer |
+> Gra o masce, tajemnicy i skakaniu między uniwersami.
 
 ### 🔧 Planowane elementy
 
-- [ ] Koncept rozgrywki
-- [ ] System masek / ról
-- [ ] Projektowanie map
-- [ ] Skrypty mechanik w Luau
-- [ ] Testowa wersja alpha
+- [ ] Przywrócenie tego co straciłem po resecie kompa.
+- [ ] Działający bossfight?
+- [ ] W miarę realistyczne rendery ludzi?
 
 ---
 
 ## 🧠 Brainroty
 
-> Gra inspirowana kulturą brainrot — pure chaos w formie gry.
-
-| Cecha | Szczegóły |
-|---|---|
-| **Gatunek** | 🤯 Chaotyczna / Komediowa |
-| **Silnik** | Godot Engine |
-| **Język** | GDScript |
-| **Typ** | Własny projekt |
+> Gra inspirowana brainrotami — manipulacja by dzieci rozstwaniały pieniądze w mojej grze.
 
 ### 🔧 Planowane elementy
 
-- [ ] Koncept i chaos design
-- [ ] Mechaniki rozgrywki
-- [ ] Oprawa graficzna w stylu brainrot
-- [ ] Sound design — peak absurd
-- [ ] Grywalna wersja demo
+- [ ] Reklamy
+- [ ] Reklamy
+- [ ] Reklamy
+- [ ] Reklamy
+- [ ] Mikropłatności
 
 ---
 
@@ -167,13 +136,13 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 
 | Projekt | Status | Postęp |
 |---|---|---|
-| Minecraft Client | 🟡 Planowanie | `▓░░░░░░░░░` 10% |
-| Minecraft Mod — Honkai Craft | 🟡 Planowanie | `▓░░░░░░░░░` 10% |
-| Programming Language | 🔴 Koncept | `░░░░░░░░░░` 0% |
-| Koszmarna Noc w Miliczu | 🔴 Koncept | `░░░░░░░░░░` 0% |
-| MG / MM | 🔒 Tajne | `░░░░░░░░░░` ?% |
-| The Masquerade | 🔴 Koncept | `░░░░░░░░░░` 0% |
-| Brainroty | 🔴 Koncept | `░░░░░░░░░░` 0% |
+| Minecraft Client | 🔴 Nieruszone | `▓░░░░░░░░░` 10% |
+| Minecraft Mod — Honkai Craft | 🟡 W trakcie | `▓░░░░░░░░░` 20% |
+| Programming Language | 🔴 Nieruszone | `░░░░░░░░░░` 0% |
+| Koszmarna Noc w Miliczu | 🟡 W trakcie | `░░░░░░░░░░` 5% |
+| MG / MM | 🔴 Działający koncept Menu | `░░░░░░░░░░` 0% |
+| The Masquerade | 🔴 Nieruszony - remake | `░░░░░░░░░░` 0% |
+| Brainroty | 🔴 Nieruszone | `░░░░░░░░░░` 0% |
 
 ---
 
