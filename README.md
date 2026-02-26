@@ -1,2 +1,6 @@
-# GameDev
-
+-Dodać moba March 7th która zmienie sie w Evernight
+-Dodać moba Fugue
+-Dodać SAM jako boss
+-Mem jako zwierzaczek? Papuga? Cały czas puszcza VoiceLine
+-Jakiś LightCone jako boss
+-Płyta muzyczna? Hope is the thing with Feathers

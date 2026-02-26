@@ -4,5 +4,9 @@
   "subtitles.fireflyidle": "",
   "entity.loyydowski_modpack.firefly": "Firefly",
   "item.loyydowski_modpack.firefly_spawn_egg": "Firefly Spawn Egg",
-  "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko"
+  "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko",
+  "subtitles.music1": "Hope Is the Thing With Feathers",
+  "item.loyydowski_modpack.hope_isthe_thing_with_feathers": "Hope Ist he Thing With Feathers",
+  "item.loyydowski_modpack.hope_isthe_thing_with_feathers.desc": "Hope Is The Thing",
+  "subtitles.song1": ""
 }

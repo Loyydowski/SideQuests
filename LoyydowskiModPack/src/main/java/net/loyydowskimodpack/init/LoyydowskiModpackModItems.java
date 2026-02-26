@@ -11,15 +11,18 @@ import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraft.world.item.Item;
 
 import net.loyydowskimodpack.item.TubisiowyCreamJedzonkoItem;
+import net.loyydowskimodpack.item.HopeIstheThingWithFeathersItem;
 import net.loyydowskimodpack.LoyydowskiModpackMod;
 
 public class LoyydowskiModpackModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, LoyydowskiModpackMod.MODID);
 	public static final RegistryObject<Item> TUBISIOWY_CREAM;
 	public static final RegistryObject<Item> FIREFLY_SPAWN_EGG;
+	public static final RegistryObject<Item> HOPE_ISTHE_THING_WITH_FEATHERS;
 	static {
 		TUBISIOWY_CREAM = REGISTRY.register("tubisiowy_cream", TubisiowyCreamJedzonkoItem::new);
 		FIREFLY_SPAWN_EGG = REGISTRY.register("firefly_spawn_egg", () -> new ForgeSpawnEggItem(LoyydowskiModpackModEntities.FIREFLY, -1, -1, new Item.Properties()));
+		HOPE_ISTHE_THING_WITH_FEATHERS = REGISTRY.register("hope_isthe_thing_with_feathers", HopeIstheThingWithFeathersItem::new);
 	}
 	// Start of user code block custom items
 	// End of user code block custom items

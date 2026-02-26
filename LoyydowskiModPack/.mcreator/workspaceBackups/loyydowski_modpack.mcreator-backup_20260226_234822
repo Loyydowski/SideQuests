@@ -39,6 +39,19 @@
           "src/main/resources/data/loyydowski_modpack/forge/biome_modifier/firefly_biome_modifier.json"
         ]
       }
+    },
+    {
+      "name": "HopeIstheThingWithFeathers",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hope_isthe_thing_with_feathers",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/loyydowski_modpack/models/item/hope_isthe_thing_with_feathers.json",
+          "src/main/java/net/loyydowskimodpack/item/HopeIstheThingWithFeathersItem.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -66,9 +79,21 @@
       ],
       "category": "voice",
       "subtitle": ""
+    },
+    {
+      "name": "music1",
+      "files": [
+        "dyskmuzycznyhopeisthe"
+      ],
+      "category": "music",
+      "subtitle": "Hope Is the Thing With Feathers"
     }
   ],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:HopeIstheThingWithFeathers"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
@@ -77,7 +102,10 @@
       "subtitles.fireflyidle": "",
       "entity.loyydowski_modpack.firefly": "Firefly",
       "item.loyydowski_modpack.firefly_spawn_egg": "Firefly Spawn Egg",
-      "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko"
+      "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko",
+      "subtitles.music1": "Hope Is the Thing With Feathers",
+      "item.loyydowski_modpack.hope_isthe_thing_with_feathers": "Hope Ist he Thing With Feathers",
+      "item.loyydowski_modpack.hope_isthe_thing_with_feathers.desc": "Hope Is The Thing"
     }
   },
   "metadata": {

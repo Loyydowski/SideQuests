@@ -17,4 +17,6 @@ public class LoyydowskiModpackModSounds {
 	public static final RegistryObject<SoundEvent> FIREFLYHIT = REGISTRY.register("fireflyhit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("loyydowski_modpack", "fireflyhit")));
 	public static final RegistryObject<SoundEvent> FIREFLYDYING = REGISTRY.register("fireflydying", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("loyydowski_modpack", "fireflydying")));
 	public static final RegistryObject<SoundEvent> FIREFLYIDLE = REGISTRY.register("fireflyidle", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("loyydowski_modpack", "fireflyidle")));
+	public static final RegistryObject<SoundEvent> MUSIC1 = REGISTRY.register("music1", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("loyydowski_modpack", "music1")));
+	public static final RegistryObject<SoundEvent> SONG1 = REGISTRY.register("song1", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("loyydowski_modpack", "song1")));
 }

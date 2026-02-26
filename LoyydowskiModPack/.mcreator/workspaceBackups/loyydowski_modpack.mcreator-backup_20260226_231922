@@ -17,11 +17,11 @@
       "type": "item",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tubisiowy_cream_jedzonko",
+      "registry_name": "tubisiowy_cream",
       "metadata": {
         "files": [
-          "src/main/resources/assets/loyydowski_modpack/models/item/tubisiowy_cream_jedzonko.json",
-          "src/main/java/net/loyydowskimodpack/item/TubisiowyCreamJedzonkoItem.java"
+          "src/main/java/net/loyydowskimodpack/item/TubisiowyCreamJedzonkoItem.java",
+          "src/main/resources/assets/loyydowski_modpack/models/item/tubisiowy_cream.json"
         ]
       }
     },
@@ -66,18 +66,27 @@
       ],
       "category": "voice",
       "subtitle": ""
+    },
+    {
+      "name": "music1",
+      "files": [
+        "dyskmuzycznyhopeisthe"
+      ],
+      "category": "music",
+      "subtitle": "Hope Is the Thing With Feathers"
     }
   ],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.loyydowski_modpack.tubisiowy_cream_jedzonko": "Tubisiowy Cream Jedzonko",
       "subtitles.fireflyhit": "",
       "subtitles.fireflydying": "",
       "subtitles.fireflyidle": "",
       "entity.loyydowski_modpack.firefly": "Firefly",
-      "item.loyydowski_modpack.firefly_spawn_egg": "Firefly Spawn Egg"
+      "item.loyydowski_modpack.firefly_spawn_egg": "Firefly Spawn Egg",
+      "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko",
+      "subtitles.music1": "Hope Is the Thing With Feathers"
     }
   },
   "metadata": {

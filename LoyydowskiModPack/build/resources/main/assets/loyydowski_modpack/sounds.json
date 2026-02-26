@@ -22,5 +22,22 @@
         "stream": false
       }
     ]
+  },
+  "music1": {
+    "subtitle": "subtitles.music1",
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:dyskmuzycznyhopeisthe",
+        "stream": true
+      }
+    ]
+  },
+  "song1": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:dyskmuzycznyhopeisthe",
+        "stream": true
+      }
+    ]
   }
 }
