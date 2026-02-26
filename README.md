@@ -139,8 +139,8 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 | Minecraft Client | 🔴 Nieruszone | `▓░░░░░░░░░` 10% |
 | Minecraft Mod — Honkai Craft | 🟡 W trakcie | `▓░░░░░░░░░` 20% |
 | Programming Language | 🔴 Nieruszone | `░░░░░░░░░░` 0% |
-| Koszmarna Noc w Miliczu | 🟡 W trakcie | `░░░░░░░░░░` 5% |
-| MG / MM | 🔴 Działający koncept Menu | `░░░░░░░░░░` 0% |
+| Koszmarna Noc w Miliczu | 🟡 W trakcie | `░░░░░░░░░░` 10% |
+| MG / MM | 🔴 Działający koncept Menu | `░░░░░░░░░░` 5% |
 | The Masquerade | 🔴 Nieruszony - remake | `░░░░░░░░░░` 0% |
 | Brainroty | 🔴 Nieruszone | `░░░░░░░░░░` 0% |
 
