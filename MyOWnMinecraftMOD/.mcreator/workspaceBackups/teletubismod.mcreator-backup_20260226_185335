@@ -1,0 +1,54 @@
+{
+  "mod_elements": [
+    {
+      "name": "TubiCream",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tubi_cream",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/teletubismod/models/item/tubi_cream.json",
+          "src/main/java/net/mcreator/teletubismod/item/TubiCreamItem.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "item.teletubismod.tubi_cream": "Tubi Cream"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/teletubismod/init/TeletubismodModItems.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/teletubismod/TeletubismodMod.java",
+      "src/main/resources/META-INF/mods.toml"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "teletubismod",
+    "modName": "TeletubisMOD",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.teletubismod"
+  },
+  "mcreatorVersion": 202500345720
+}
