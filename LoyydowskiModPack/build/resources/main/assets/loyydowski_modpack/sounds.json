@@ -1,0 +1,26 @@
+{
+  "fireflyhit": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:fireflyuderzono",
+        "stream": false
+      }
+    ]
+  },
+  "fireflydying": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:fireflyzgon",
+        "stream": false
+      }
+    ]
+  },
+  "fireflyidle": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:idlefirefly",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "mod_elements": [
+    {
+      "name": "TubisiowyCream",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tubisiowy_cream",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/loyydowski_modpack/recipes/tubisiowy_cream.json"
+        ]
+      }
+    },
+    {
+      "name": "TubisiowyCreamJedzonko",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tubisiowy_cream",
+      "metadata": {
+        "files": [
+          "src/main/java/net/loyydowskimodpack/item/TubisiowyCreamJedzonkoItem.java",
+          "src/main/resources/assets/loyydowski_modpack/models/item/tubisiowy_cream.json"
+        ]
+      }
+    },
+    {
+      "name": "Firefly",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firefly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/loyydowskimodpack/client/renderer/FireflyRenderer.java",
+          "src/main/resources/assets/loyydowski_modpack/models/item/firefly_spawn_egg.json",
+          "src/main/java/net/loyydowskimodpack/entity/FireflyEntity.java",
+          "src/main/resources/data/loyydowski_modpack/forge/biome_modifier/firefly_biome_modifier.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "fireflyhit",
+      "files": [
+        "fireflyuderzono"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "fireflydying",
+      "files": [
+        "fireflyzgon"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "fireflyidle",
+      "files": [
+        "idlefirefly"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "subtitles.fireflyhit": "",
+      "subtitles.fireflydying": "",
+      "subtitles.fireflyidle": "",
+      "entity.loyydowski_modpack.firefly": "Firefly",
+      "item.loyydowski_modpack.firefly_spawn_egg": "Firefly Spawn Egg",
+      "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModItems.java",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModEntityRenderers.java",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModEntities.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/resources/assets/loyydowski_modpack/sounds.json",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModTabs.java",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModSounds.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/loyydowskimodpack/LoyydowskiModpackMod.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "loyydowski_modpack",
+    "modName": "Loyydowski ModPack",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.loyydowskimodpack"
+  },
+  "mcreatorVersion": 202500345720
+}
