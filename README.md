@@ -10,7 +10,7 @@
 
 ---
 
-*Repozytorium, w którym rozwijam swoje pomysły — od modów do Minecrafta po własny język programowania.*
+*GŁÓWNIE GIERKI*
 
 </div>
 
