@@ -1,10 +1,8 @@
-
-
 <div align="center">
 
 # 🚀 Side Projects
 
-**Moje miejsce na kreatywne projekty, eksperymenty i naukę.**
+**Bartek i genialne pomysły**
 
 [![Status](https://img.shields.io/badge/status-in%20progress-yellow?style=for-the-badge)](https://github.com/)
 [![Made with](https://img.shields.io/badge/made%20with-❤️-red?style=for-the-badge)](https://github.com/)
