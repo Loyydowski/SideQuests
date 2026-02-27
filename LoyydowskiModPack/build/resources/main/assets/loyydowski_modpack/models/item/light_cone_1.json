@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "loyydowski_modpack:item/lightcone1"
+  }
+}

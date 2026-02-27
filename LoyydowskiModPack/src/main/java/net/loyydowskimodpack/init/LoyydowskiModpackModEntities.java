@@ -15,7 +15,9 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.loyydowskimodpack.entity.MarchEntity;
 import net.loyydowskimodpack.entity.FireflyEntity;
+import net.loyydowskimodpack.entity.EvernightEntity;
 import net.loyydowskimodpack.LoyydowskiModpackMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -25,6 +27,14 @@ public class LoyydowskiModpackModEntities {
 			EntityType.Builder.<FireflyEntity>of(FireflyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireflyEntity::new)
 
 					.sized(0.6f, 1.4f));
+	public static final RegistryObject<EntityType<EvernightEntity>> EVERNIGHT = register("evernight",
+			EntityType.Builder.<EvernightEntity>of(EvernightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(66).setUpdateInterval(3).setCustomClientFactory(EvernightEntity::new)
+
+					.sized(0.6f, 1.5f));
+	public static final RegistryObject<EntityType<MarchEntity>> MARCH = register("march",
+			EntityType.Builder.<MarchEntity>of(MarchEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarchEntity::new)
+
+					.sized(0.6f, 1.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -36,11 +46,15 @@ public class LoyydowskiModpackModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			FireflyEntity.init();
+			EvernightEntity.init();
+			MarchEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(FIREFLY.get(), FireflyEntity.createAttributes().build());
+		event.put(EVERNIGHT.get(), EvernightEntity.createAttributes().build());
+		event.put(MARCH.get(), MarchEntity.createAttributes().build());
 	}
 }

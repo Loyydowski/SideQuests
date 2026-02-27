@@ -39,5 +39,53 @@
         "stream": true
       }
     ]
+  },
+  "idlefirefly2": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:idlefirefly2",
+        "stream": false
+      }
+    ]
+  },
+  "idlefirefly3": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:idlefirefly3",
+        "stream": false
+      }
+    ]
+  },
+  "evernightdying": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:evernightdeath",
+        "stream": false
+      }
+    ]
+  },
+  "evernighthit1": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:evernighthit1",
+        "stream": false
+      }
+    ]
+  },
+  "evernighthit2": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:evernighthit2",
+        "stream": false
+      }
+    ]
+  },
+  "evernighthit3": {
+    "sounds": [
+      {
+        "name": "loyydowski_modpack:evernighthit3",
+        "stream": false
+      }
+    ]
   }
 }

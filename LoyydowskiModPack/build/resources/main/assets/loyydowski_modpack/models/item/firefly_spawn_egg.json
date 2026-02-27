@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraft:item/campfire"
+    "layer0": "loyydowski_modpack:item/firefly_spawn_egg"
   }
 }
