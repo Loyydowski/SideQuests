@@ -135,14 +135,14 @@ Można prowadzić w nim proste operacje matematyczne oraz operacje na stringach 
 ## 📌 Status projektów
 
 | Projekt | Status | Postęp |
-|---|---|---|
-| Minecraft Client | 🔴 Nieruszone | `▓░░░░░░░░░` 10% |
-| Minecraft Mod — Honkai Craft | 🟡 W trakcie | `▓░░░░░░░░░` 20% |
-| Programming Language | 🔴 Nieruszone | `░░░░░░░░░░` 0% |
-| Koszmarna Noc w Miliczu | 🟡 W trakcie | `░░░░░░░░░░` 10% |
-| MG / MM | 🔴 Działający koncept Menu | `░░░░░░░░░░` 5% |
-| The Masquerade | 🔴 Nieruszony - remake | `░░░░░░░░░░` 0% |
-| Brainroty | 🔴 Nieruszone | `░░░░░░░░░░` 0% |
+| :--- | :--- | :--- |
+| **Minecraft Client** | ![Status](https://img.shields.io/badge/Status-Nieruszone-red?style=flat-square) | ![10%](https://progress-bar.dev/10) |
+| **Minecraft Mod — Honkai Craft** | ![Status](https://img.shields.io/badge/Status-W_trakcie-yellow?style=flat-square) | ![20%](https://progress-bar.dev/20) |
+| **Programming Language** | ![Status](https://img.shields.io/badge/Status-Nieruszone-red?style=flat-square) | ![0%](https://progress-bar.dev/0) |
+| **Koszmarna Noc w Miliczu** | ![Status](https://img.shields.io/badge/Status-W_trakcie-yellow?style=flat-square) | ![10%](https://progress-bar.dev/10) |
+| **MG / MM** | ![Status](https://img.shields.io/badge/Status-Koncept_Menu-red?style=flat-square) | ![5%](https://progress-bar.dev/5) |
+| **The Masquerade** | ![Status](https://img.shields.io/badge/Status-Remake-red?style=flat-square) | ![0%](https://progress-bar.dev/0) |
+| **Brainroty** | ![Status](https://img.shields.io/badge/Status-Nieruszone-red?style=flat-square) | ![0%](https://progress-bar.dev/0) |
 
 ---
 
