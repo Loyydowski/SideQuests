@@ -16,6 +16,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.loyydowskimodpack.entity.MarchEntity;
+import net.loyydowskimodpack.entity.FugueEntity;
 import net.loyydowskimodpack.entity.FireflyEntity;
 import net.loyydowskimodpack.entity.EvernightEntity;
 import net.loyydowskimodpack.LoyydowskiModpackMod;
@@ -35,6 +36,10 @@ public class LoyydowskiModpackModEntities {
 			EntityType.Builder.<MarchEntity>of(MarchEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MarchEntity::new)
 
 					.sized(0.6f, 1.5f));
+	public static final RegistryObject<EntityType<FugueEntity>> FUGUE = register("fugue",
+			EntityType.Builder.<FugueEntity>of(FugueEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FugueEntity::new)
+
+					.sized(0.6f, 1.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -48,6 +53,7 @@ public class LoyydowskiModpackModEntities {
 			FireflyEntity.init();
 			EvernightEntity.init();
 			MarchEntity.init();
+			FugueEntity.init();
 		});
 	}
 
@@ -56,5 +62,6 @@ public class LoyydowskiModpackModEntities {
 		event.put(FIREFLY.get(), FireflyEntity.createAttributes().build());
 		event.put(EVERNIGHT.get(), EvernightEntity.createAttributes().build());
 		event.put(MARCH.get(), MarchEntity.createAttributes().build());
+		event.put(FUGUE.get(), FugueEntity.createAttributes().build());
 	}
 }

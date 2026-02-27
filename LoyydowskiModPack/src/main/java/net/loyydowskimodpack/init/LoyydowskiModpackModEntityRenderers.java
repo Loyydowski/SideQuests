@@ -9,6 +9,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.loyydowskimodpack.client.renderer.MarchRenderer;
+import net.loyydowskimodpack.client.renderer.FugueRenderer;
 import net.loyydowskimodpack.client.renderer.FireflyRenderer;
 import net.loyydowskimodpack.client.renderer.EvernightRenderer;
 
@@ -19,5 +20,6 @@ public class LoyydowskiModpackModEntityRenderers {
 		event.registerEntityRenderer(LoyydowskiModpackModEntities.FIREFLY.get(), FireflyRenderer::new);
 		event.registerEntityRenderer(LoyydowskiModpackModEntities.EVERNIGHT.get(), EvernightRenderer::new);
 		event.registerEntityRenderer(LoyydowskiModpackModEntities.MARCH.get(), MarchRenderer::new);
+		event.registerEntityRenderer(LoyydowskiModpackModEntities.FUGUE.get(), FugueRenderer::new);
 	}
 }

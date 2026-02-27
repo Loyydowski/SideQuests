@@ -19,5 +19,7 @@
   "subtitles.evernighthit2": "",
   "subtitles.evernighthit3": "",
   "entity.loyydowski_modpack.march": "March 7th",
-  "item.loyydowski_modpack.march_spawn_egg": "March 7th Spawn Egg"
+  "item.loyydowski_modpack.march_spawn_egg": "March 7th Spawn Egg",
+  "entity.loyydowski_modpack.fugue": "Fugue",
+  "item.loyydowski_modpack.fugue_spawn_egg": "Fugue Spawn Egg"
 }

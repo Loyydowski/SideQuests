@@ -95,6 +95,21 @@
           "src/main/java/net/loyydowskimodpack/client/renderer/MarchRenderer.java"
         ]
       }
+    },
+    {
+      "name": "Fugue",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fugue",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/loyydowski_modpack/forge/biome_modifier/fugue_biome_modifier.json",
+          "src/main/resources/assets/loyydowski_modpack/models/item/fugue_spawn_egg.json",
+          "src/main/java/net/loyydowskimodpack/client/renderer/FugueRenderer.java",
+          "src/main/java/net/loyydowskimodpack/entity/FugueEntity.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -219,7 +234,9 @@
       "subtitles.evernighthit2": "",
       "subtitles.evernighthit3": "",
       "entity.loyydowski_modpack.march": "March 7th",
-      "item.loyydowski_modpack.march_spawn_egg": "March 7th Spawn Egg"
+      "item.loyydowski_modpack.march_spawn_egg": "March 7th Spawn Egg",
+      "entity.loyydowski_modpack.fugue": "Fugue",
+      "item.loyydowski_modpack.fugue_spawn_egg": "Fugue Spawn Egg"
     }
   },
   "metadata": {

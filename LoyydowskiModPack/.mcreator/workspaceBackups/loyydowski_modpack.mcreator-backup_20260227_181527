@@ -1,0 +1,258 @@
+{
+  "mod_elements": [
+    {
+      "name": "TubisiowyCream",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tubisiowy_cream",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/loyydowski_modpack/recipes/tubisiowy_cream.json"
+        ]
+      }
+    },
+    {
+      "name": "TubisiowyCreamJedzonko",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tubisiowy_cream",
+      "metadata": {
+        "files": [
+          "src/main/java/net/loyydowskimodpack/item/TubisiowyCreamJedzonkoItem.java",
+          "src/main/resources/assets/loyydowski_modpack/models/item/tubisiowy_cream.json"
+        ]
+      }
+    },
+    {
+      "name": "Firefly",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "firefly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/loyydowskimodpack/client/renderer/FireflyRenderer.java",
+          "src/main/resources/assets/loyydowski_modpack/models/item/firefly_spawn_egg.json",
+          "src/main/java/net/loyydowskimodpack/entity/FireflyEntity.java",
+          "src/main/resources/data/loyydowski_modpack/forge/biome_modifier/firefly_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "HopeIstheThingWithFeathers",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hope_isthe_thing_with_feathers",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/loyydowski_modpack/models/item/hope_isthe_thing_with_feathers.json",
+          "src/main/java/net/loyydowskimodpack/item/HopeIstheThingWithFeathersItem.java"
+        ]
+      }
+    },
+    {
+      "name": "LightCone1",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_cone_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/loyydowski_modpack/models/item/light_cone_1.json",
+          "src/main/java/net/loyydowskimodpack/item/LightCone1Item.java"
+        ]
+      }
+    },
+    {
+      "name": "Evernight",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evernight",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/loyydowski_modpack/forge/biome_modifier/evernight_biome_modifier.json",
+          "src/main/java/net/loyydowskimodpack/client/renderer/EvernightRenderer.java",
+          "src/main/java/net/loyydowskimodpack/entity/EvernightEntity.java",
+          "src/main/resources/assets/loyydowski_modpack/models/item/evernight_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "March",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "march",
+      "metadata": {
+        "files": [
+          "src/main/java/net/loyydowskimodpack/entity/MarchEntity.java",
+          "src/main/resources/data/loyydowski_modpack/forge/biome_modifier/march_biome_modifier.json",
+          "src/main/resources/assets/loyydowski_modpack/models/item/march_spawn_egg.json",
+          "src/main/java/net/loyydowskimodpack/client/renderer/MarchRenderer.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "fireflyhit",
+      "files": [
+        "fireflyuderzono"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "fireflydying",
+      "files": [
+        "fireflyzgon"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "fireflyidle",
+      "files": [
+        "idlefirefly"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "music1",
+      "files": [
+        "dyskmuzycznyhopeisthe"
+      ],
+      "category": "music",
+      "subtitle": "Hope Is the Thing With Feathers"
+    },
+    {
+      "name": "song1",
+      "files": [
+        "dyskmuzycznyhopeisthe"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "idlefirefly2",
+      "files": [
+        "idlefirefly2"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "idlefirefly3",
+      "files": [
+        "idlefirefly3"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "evernightdying",
+      "files": [
+        "evernightdeath"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "evernighthit1",
+      "files": [
+        "evernighthit1"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "evernighthit2",
+      "files": [
+        "evernighthit2"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    },
+    {
+      "name": "evernighthit3",
+      "files": [
+        "evernighthit3"
+      ],
+      "category": "voice",
+      "subtitle": ""
+    }
+  ],
+  "tag_elements": {
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:HopeIstheThingWithFeathers"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:LightCone1"
+    ]
+  },
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "subtitles.fireflyhit": "",
+      "subtitles.fireflydying": "",
+      "subtitles.fireflyidle": "",
+      "entity.loyydowski_modpack.firefly": "Firefly",
+      "item.loyydowski_modpack.firefly_spawn_egg": "Firefly Spawn Egg",
+      "item.loyydowski_modpack.tubisiowy_cream": "Tubisiowy Cream Jedzonko",
+      "subtitles.music1": "Hope Is the Thing With Feathers",
+      "item.loyydowski_modpack.hope_isthe_thing_with_feathers": "Hope Ist he Thing With Feathers",
+      "item.loyydowski_modpack.hope_isthe_thing_with_feathers.desc": "Hope Is The Thing",
+      "subtitles.song1": "",
+      "item.loyydowski_modpack.light_cone_1": "Make Farewells More Beautiful",
+      "subtitles.idlefirefly2": "",
+      "subtitles.idlefirefly3": "",
+      "entity.loyydowski_modpack.evernight": "Evernight",
+      "item.loyydowski_modpack.evernight_spawn_egg": "Evernight Spawn Egg",
+      "subtitles.evernightdying": "",
+      "subtitles.evernighthit1": "",
+      "subtitles.evernighthit2": "",
+      "subtitles.evernighthit3": "",
+      "entity.loyydowski_modpack.march": "March 7th",
+      "item.loyydowski_modpack.march_spawn_egg": "March 7th Spawn Egg"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModItems.java",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModEntityRenderers.java",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModEntities.java",
+      "src/main/resources/META-INF/mods.toml",
+      "src/main/resources/assets/loyydowski_modpack/sounds.json",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModTabs.java",
+      "src/main/java/net/loyydowskimodpack/init/LoyydowskiModpackModSounds.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/loyydowskimodpack/LoyydowskiModpackMod.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "loyydowski_modpack",
+    "modName": "Loyydowski ModPack",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.loyydowskimodpack"
+  },
+  "mcreatorVersion": 202500345720
+}

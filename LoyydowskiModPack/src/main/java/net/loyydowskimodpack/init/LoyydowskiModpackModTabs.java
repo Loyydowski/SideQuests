@@ -26,6 +26,7 @@ public class LoyydowskiModpackModTabs {
 			tabData.accept(LoyydowskiModpackModItems.FIREFLY_SPAWN_EGG.get());
 			tabData.accept(LoyydowskiModpackModItems.EVERNIGHT_SPAWN_EGG.get());
 			tabData.accept(LoyydowskiModpackModItems.MARCH_SPAWN_EGG.get());
+			tabData.accept(LoyydowskiModpackModItems.FUGUE_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(LoyydowskiModpackModItems.LIGHT_CONE_1.get());
 		}

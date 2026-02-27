@@ -23,6 +23,7 @@ public class LoyydowskiModpackModItems {
 	public static final RegistryObject<Item> LIGHT_CONE_1;
 	public static final RegistryObject<Item> EVERNIGHT_SPAWN_EGG;
 	public static final RegistryObject<Item> MARCH_SPAWN_EGG;
+	public static final RegistryObject<Item> FUGUE_SPAWN_EGG;
 	static {
 		TUBISIOWY_CREAM = REGISTRY.register("tubisiowy_cream", TubisiowyCreamJedzonkoItem::new);
 		FIREFLY_SPAWN_EGG = REGISTRY.register("firefly_spawn_egg", () -> new ForgeSpawnEggItem(LoyydowskiModpackModEntities.FIREFLY, -1, -1, new Item.Properties()));
@@ -30,6 +31,7 @@ public class LoyydowskiModpackModItems {
 		LIGHT_CONE_1 = REGISTRY.register("light_cone_1", LightCone1Item::new);
 		EVERNIGHT_SPAWN_EGG = REGISTRY.register("evernight_spawn_egg", () -> new ForgeSpawnEggItem(LoyydowskiModpackModEntities.EVERNIGHT, -1, -1, new Item.Properties()));
 		MARCH_SPAWN_EGG = REGISTRY.register("march_spawn_egg", () -> new ForgeSpawnEggItem(LoyydowskiModpackModEntities.MARCH, -1, -1, new Item.Properties()));
+		FUGUE_SPAWN_EGG = REGISTRY.register("fugue_spawn_egg", () -> new ForgeSpawnEggItem(LoyydowskiModpackModEntities.FUGUE, -1, -1, new Item.Properties()));
 	}
 	// Start of user code block custom items
 	// End of user code block custom items
