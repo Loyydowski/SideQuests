@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dntfcgjo7gqli"]
+
+[ext_resource type="Script" uid="uid://bklodfqwajgww" path="res://skrypty/nowagra.gd" id="1_ajb5y"]
+
+[node name="MainMenu" type="Control" unique_id=1342017922]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=403281059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1513489212]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -68.0
+offset_right = 89.0
+offset_bottom = 68.0
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer" unique_id=308456181]
+layout_mode = 2
+text = "Nowa Gra"
+script = ExtResource("1_ajb5y")
+
+[node name="Button2" type="Button" parent="ColorRect/VBoxContainer" unique_id=64943416]
+layout_mode = 2
+text = "Kontynuuj"
+
+[node name="Button3" type="Button" parent="ColorRect/VBoxContainer" unique_id=583149646]
+layout_mode = 2
+text = "Opcje"
+
+[node name="Button4" type="Button" parent="ColorRect/VBoxContainer" unique_id=1394434084]
+layout_mode = 2
+text = "Wyjście"
