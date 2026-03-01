@@ -45,7 +45,7 @@ func _process(delta):
 func _on_left_hovered():
 	if czy_otwarto_kamery or czy_otwarto_telefon:
 		return
-	target_rotation += deg_to_rad(90)
+	target_rotation += deg_to_rad(135)
 	player.odwrocony = !player.odwrocony
 	update_buttons()
 
@@ -53,7 +53,7 @@ func _on_left_hovered():
 func _on_right_hovered():
 	if czy_otwarto_kamery or czy_otwarto_telefon:
 		return
-	target_rotation -= deg_to_rad(90)
+	target_rotation -= deg_to_rad(135)
 	player.odwrocony = !player.odwrocony
 	update_buttons()
 

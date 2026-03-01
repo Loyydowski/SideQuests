@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bum0f3t2tjft1"
+path="res://.godot/imported/DialogZakończenieNocy1.dialogue-c502beaae0435383f530053d10a5941b.tres"
+
+[deps]
+
+source_file="res://dialogi/DialogZakończenieNocy1.dialogue"
+dest_files=["res://.godot/imported/DialogZakończenieNocy1.dialogue-c502beaae0435383f530053d10a5941b.tres"]
+
+[params]
+
+defaults=true
