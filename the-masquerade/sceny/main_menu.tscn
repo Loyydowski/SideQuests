@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dntfcgjo7gqli"]
 
 [ext_resource type="Script" uid="uid://bklodfqwajgww" path="res://skrypty/nowagra.gd" id="1_ajb5y"]
+[ext_resource type="Script" uid="uid://cj1o045xkctvj" path="res://skrypty/continuebutton.gd" id="2_63vf4"]
+[ext_resource type="Script" uid="uid://bljatq1shhp0i" path="res://skrypty/settingsbutton.gd" id="3_hignl"]
+[ext_resource type="Script" uid="uid://ccuyy5ynwt67b" path="res://skrypty/exitbutton.gd" id="4_mkowe"]
 
 [node name="MainMenu" type="Control" unique_id=1342017922]
 layout_mode = 3
@@ -37,11 +40,14 @@ script = ExtResource("1_ajb5y")
 [node name="Button2" type="Button" parent="ColorRect/VBoxContainer" unique_id=64943416]
 layout_mode = 2
 text = "Kontynuuj"
+script = ExtResource("2_63vf4")
 
 [node name="Button3" type="Button" parent="ColorRect/VBoxContainer" unique_id=583149646]
 layout_mode = 2
 text = "Opcje"
+script = ExtResource("3_hignl")
 
 [node name="Button4" type="Button" parent="ColorRect/VBoxContainer" unique_id=1394434084]
 layout_mode = 2
 text = "Wyjście"
+script = ExtResource("4_mkowe")
