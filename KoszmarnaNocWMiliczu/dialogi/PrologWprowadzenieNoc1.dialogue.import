@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c0su3c8cp81hn"
+path="res://.godot/imported/PrologWprowadzenieNoc1.dialogue-5cd3006f92a56ece803062c6ef173c06.tres"
+
+[deps]
+
+source_file="res://dialogi/PrologWprowadzenieNoc1.dialogue"
+dest_files=["res://.godot/imported/PrologWprowadzenieNoc1.dialogue-5cd3006f92a56ece803062c6ef173c06.tres"]
+
+[params]
+
+defaults=true
