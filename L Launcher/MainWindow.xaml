@@ -5,30 +5,903 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KitLauncher"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="KitLauncher" Height="560" Width="950"
+        Background="#FF0D0D14"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="False">
+
+    <Window.Resources>
+        <Color x:Key="Accent">#9B59B6</Color>
+        <Color x:Key="AccentLight">#C39BD3</Color>
+        <Color x:Key="AccentDark">#7D3C98</Color>
+        <Color x:Key="GlowColor">#9B59B6</Color>
+        <Color x:Key="GlowColorSoft">#663399</Color>
+        <SolidColorBrush x:Key="AccentBrush"   Color="{StaticResource Accent}"/>
+        <SolidColorBrush x:Key="AccentLBrush"  Color="{StaticResource AccentLight}"/>
+        <SolidColorBrush x:Key="BgDark"        Color="#FF0D0D14"/>
+        <SolidColorBrush x:Key="BgCard"        Color="#FF1A1A28"/>
+        <SolidColorBrush x:Key="BgCardHover"   Color="#FF252538"/>
+        <SolidColorBrush x:Key="BgSurface"     Color="#FF131320"/>
+        <SolidColorBrush x:Key="TextPrimary"   Color="#FFECECEC"/>
+        <SolidColorBrush x:Key="TextSecondary" Color="#FF8888A0"/>
+        <SolidColorBrush x:Key="GlowBrush"     Color="#9B59B6"/>
+        <Style x:Key="TabButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{StaticResource TextSecondary}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0 0 0 3"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border"
+                                        Property="Background" Value="#FF1A1A28"/>
+                                <Setter Property="Foreground"
+                                        Value="{StaticResource AccentLBrush}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="PlayButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="58"/>
+            <Setter Property="Width" Value="230"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="playBorder" CornerRadius="12"
+                                SnapsToDevicePixels="True">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="{StaticResource Accent}" Offset="0"/>
+                                    <GradientStop Color="{StaticResource AccentDark}" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Border.Effect>
+                                <DropShadowEffect Color="{StaticResource GlowColor}"
+                                                  BlurRadius="35" ShadowDepth="0"
+                                                  Opacity="0.55"/>
+                            </Border.Effect>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="playBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="{StaticResource AccentLight}" Offset="0"/>
+                                            <GradientStop Color="{StaticResource Accent}" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="playBorder" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="{StaticResource AccentLight}"
+                                                          BlurRadius="50" ShadowDepth="0"
+                                                          Opacity="0.7"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="playBorder" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.97" ScaleY="0.97"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="playBorder" Property="RenderTransformOrigin"
+                                        Value="0.5,0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SmallAccentButton" TargetType="Button">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,6,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="btnBorder" CornerRadius="6"
+                                Padding="14,0" SnapsToDevicePixels="True"
+                                Background="#FF2A2A40" BorderBrush="#FF3D3D5C"
+                                BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="btnBorder" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                            <GradientStop Color="#9B59B6" Offset="0"/>
+                                            <GradientStop Color="#7D3C98" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="btnBorder" Property="BorderBrush"
+                                        Value="#C39BD3"/>
+                                <Setter TargetName="btnBorder" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#9B59B6"
+                                                          BlurRadius="15" ShadowDepth="0"
+                                                          Opacity="0.5"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ModToggleStyle" TargetType="ToggleButton">
+            <Setter Property="Margin" Value="6"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="{StaticResource TextSecondary}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border x:Name="modBorder"
+                                Background="#FF1A1A28"
+                                CornerRadius="12"
+                                Padding="16,18"
+                                BorderBrush="#FF2D2D44"
+                                BorderThickness="1.5"
+                                SnapsToDevicePixels="True">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <ContentPresenter Grid.Row="0"
+                                                  HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center"/>
+                                <Border x:Name="statusBar" Grid.Row="1"
+                                        CornerRadius="3" Height="5"
+                                        Margin="8,12,8,0"
+                                        Background="#FF2D2D44"/>
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground"
+                                        Value="{StaticResource TextPrimary}"/>
+                                <Setter TargetName="modBorder"
+                                        Property="BorderBrush" Value="#9B59B6"/>
+                                <Setter TargetName="modBorder"
+                                        Property="Background" Value="#FF1E1E32"/>
+                                <Setter TargetName="statusBar"
+                                        Property="Background" Value="#9B59B6"/>
+                                <Setter TargetName="statusBar" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#9B59B6"
+                                                          BlurRadius="12"
+                                                          ShadowDepth="0"
+                                                          Opacity="0.9"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="modBorder" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#9B59B6"
+                                                          BlurRadius="22"
+                                                          ShadowDepth="0"
+                                                          Opacity="0.4"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsChecked" Value="False"/>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="modBorder"
+                                        Property="Background" Value="#FF252538"/>
+                                <Setter TargetName="modBorder"
+                                        Property="BorderBrush" Value="#FF3D3D5C"/>
+                                <Setter TargetName="statusBar"
+                                        Property="Background" Value="#FF3D3D5C"/>
+                            </MultiTrigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsChecked" Value="True"/>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="modBorder"
+                                        Property="BorderBrush" Value="#C39BD3"/>
+                                <Setter TargetName="modBorder"
+                                        Property="Background" Value="#FF252540"/>
+                                <Setter TargetName="statusBar"
+                                        Property="Background" Value="#C39BD3"/>
+                                <Setter TargetName="modBorder" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#C39BD3"
+                                                          BlurRadius="32"
+                                                          ShadowDepth="0"
+                                                          Opacity="0.55"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </MultiTrigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="modBorder"
+                                        Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.96"
+                                                        ScaleY="0.96"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="modBorder"
+                                        Property="RenderTransformOrigin"
+                                        Value="0.5,0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="GlowCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="#FF1A1A28"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="18"/>
+            <Setter Property="BorderBrush" Value="#FF2D2D44"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="{StaticResource GlowColorSoft}"
+                                      BlurRadius="18" ShadowDepth="0"
+                                      Opacity="0.15"/>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="#9B59B6"/>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect Color="{StaticResource GlowColor}"
+                                              BlurRadius="28" ShadowDepth="0"
+                                              Opacity="0.35"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="#FF1A1A28"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="16"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BorderBrush" Value="#FF252538"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF252538"/>
+                    <Setter Property="BorderBrush" Value="#FF3D3D5C"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="DarkTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#FF111119"/>
+            <Setter Property="Foreground" Value="#FFECECEC"/>
+            <Setter Property="BorderBrush" Value="#FF2D2D44"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="CaretBrush" Value="#9B59B6"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border x:Name="bd" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="BorderBrush"
+                                        Value="#9B59B6"/>
+                                <Setter TargetName="bd" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#9B59B6"
+                                                          BlurRadius="12" ShadowDepth="0"
+                                                          Opacity="0.25"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="bd" Property="BorderBrush"
+                                        Value="#C39BD3"/>
+                                <Setter TargetName="bd" Property="Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#9B59B6"
+                                                          BlurRadius="20" ShadowDepth="0"
+                                                          Opacity="0.4"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" HorizontalAlignment="Stretch">Aktualności</Button>
-            <Button Grid.Column="1" HorizontalAlignment="Stretch">Strona Główna</Button>
-            <Button Grid.Column="2" HorizontalAlignment="Stretch">Mody</Button>
-        </Grid>
+        <Canvas Grid.RowSpan="3" IsHitTestVisible="False">
+            <Ellipse Canvas.Left="-80" Canvas.Top="-80"
+                     Width="300" Height="300" Opacity="0.06">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#9B59B6" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Canvas.Left="600" Canvas.Top="300"
+                     Width="350" Height="350" Opacity="0.05">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#7D3C98" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Canvas.Left="250" Canvas.Top="120"
+                     Width="400" Height="250" Opacity="0.03">
+                <Ellipse.Fill>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#C39BD3" Offset="0"/>
+                        <GradientStop Color="Transparent" Offset="1"/>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+        <Border Grid.Row="0" Background="#FF111119"
+                BorderBrush="#FF2A2A3D" BorderThickness="0 0 0 1">
+            <Border.Effect>
+                <DropShadowEffect Color="{StaticResource GlowColorSoft}"
+                                  BlurRadius="12" ShadowDepth="3"
+                                  Direction="270" Opacity="0.15"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="tabNews" Grid.Column="0"
+                        Style="{StaticResource TabButtonStyle}"
+                        Click="TabNews_Click"
+                        Content="📰  Aktualności"/>
+
+                <Button x:Name="tabHome" Grid.Column="1"
+                        Style="{StaticResource TabButtonStyle}"
+                        Click="TabHome_Click"
+                        Foreground="{StaticResource TextPrimary}"
+                        BorderBrush="{StaticResource AccentBrush}"
+                        Content="🏠  Strona Główna"/>
+
+                <Button x:Name="tabMods" Grid.Column="2"
+                        Style="{StaticResource TabButtonStyle}"
+                        Click="TabMods_Click"
+                        Content="🧩  Mody"/>
+            </Grid>
+        </Border>
         <Grid Grid.Row="1">
+            <Grid x:Name="panelNews" Visibility="Collapsed" Margin="20">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <TextBlock FontSize="26" FontWeight="Bold"
+                                   Foreground="{StaticResource AccentBrush}"
+                                   Margin="0,0,0,16">
+                            <TextBlock.Effect>
+                                <DropShadowEffect Color="{StaticResource GlowColor}"
+                                                  BlurRadius="15" ShadowDepth="0"
+                                                  Opacity="0.4"/>
+                            </TextBlock.Effect>
+                            Aktualności
+                        </TextBlock>
+
+                        <Border Style="{StaticResource CardStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Lorem Ipsum Dolor Sit Amet"
+                                           FontSize="16" FontWeight="SemiBold"
+                                           Foreground="{StaticResource TextPrimary}"/>
+                                <TextBlock Text="2025-06-15"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           Margin="0,4,0,10"/>
+                                <TextBlock TextWrapping="Wrap"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           LineHeight="22"
+                                           Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Style="{StaticResource CardStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Consectetur Adipiscing Elit"
+                                           FontSize="16" FontWeight="SemiBold"
+                                           Foreground="{StaticResource TextPrimary}"/>
+                                <TextBlock Text="2025-06-10"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           Margin="0,4,0,10"/>
+                                <TextBlock TextWrapping="Wrap"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           LineHeight="22"
+                                           Text="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Style="{StaticResource CardStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Sed Ut Perspiciatis Unde"
+                                           FontSize="16" FontWeight="SemiBold"
+                                           Foreground="{StaticResource TextPrimary}"/>
+                                <TextBlock Text="2025-06-05"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           Margin="0,4,0,10"/>
+                                <TextBlock TextWrapping="Wrap"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           LineHeight="22"
+                                           Text="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <Grid x:Name="panelHome" Visibility="Visible" Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="16"/>
+                    <ColumnDefinition Width="320"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" VerticalAlignment="Center">
+                    <Border Style="{StaticResource GlowCardStyle}">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                                <TextBlock Text="⚙" FontSize="22"
+                                           VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                <TextBlock Text="Ustawienia gry"
+                                           FontSize="22" FontWeight="Bold"
+                                           Foreground="{StaticResource TextPrimary}"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+
+                            <TextBlock Text="Wersja:"
+                                       Foreground="{StaticResource TextSecondary}"
+                                       FontSize="13" Margin="0,0,0,6"/>
+                            <ComboBox x:Name="versionCombo" SelectedIndex="0" FontSize="13">
+                                <ComboBoxItem Content="1.20.4 — KitPack"/>
+                                <ComboBoxItem Content="1.19.2 — KitPack Legacy"/>
+                                <ComboBoxItem Content="1.21.1 — Vanilla"/>
+                            </ComboBox>
+
+                            <TextBlock Text="Pamięć RAM:"
+                                       Foreground="{StaticResource TextSecondary}"
+                                       FontSize="13" Margin="0,22,0,6"/>
+                            <Slider x:Name="ramSlider"
+                                    Minimum="2" Maximum="16" Value="4"
+                                    TickFrequency="1" IsSnapToTickEnabled="True"/>
+                            <TextBlock x:Name="ramLabel"
+                                       Foreground="{StaticResource AccentBrush}"
+                                       FontWeight="Bold" FontSize="16"
+                                       HorizontalAlignment="Center"
+                                       Margin="0,6,0,0">
+                                <TextBlock.Effect>
+                                    <DropShadowEffect Color="{StaticResource GlowColor}"
+                                                      BlurRadius="10" ShadowDepth="0"
+                                                      Opacity="0.5"/>
+                                </TextBlock.Effect>
+                                4 GB
+                            </TextBlock>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+
+                        <Border Style="{StaticResource GlowCardStyle}" Margin="0,0,0,12">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock Text="👤" FontSize="18"
+                                               VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                    <TextBlock Text="Twój Nick" FontSize="18"
+                                               FontWeight="Bold"
+                                               Foreground="{StaticResource TextPrimary}"
+                                               VerticalAlignment="Center"/>
+                                </StackPanel>
+
+                                <TextBox x:Name="nickBox"
+                                         Style="{StaticResource DarkTextBoxStyle}"
+                                         Text="Gracz123"/>
+                                <TextBlock Text="Nick wyświetlany w grze"
+                                           Foreground="{StaticResource TextSecondary}"
+                                           FontSize="11" Margin="0,6,0,0"
+                                           FontStyle="Italic"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Style="{StaticResource GlowCardStyle}" Margin="0,0,0,12">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock Text="🔑" FontSize="18"
+                                               VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                    <TextBlock FontSize="18" FontWeight="Bold"
+                                               Foreground="{StaticResource AccentBrush}"
+                                               VerticalAlignment="Center">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect Color="{StaticResource GlowColor}"
+                                                              BlurRadius="12" ShadowDepth="0"
+                                                              Opacity="0.5"/>
+                                        </TextBlock.Effect>
+                                        Alt Manager
+                                    </TextBlock>
+                                </StackPanel>
+
+                                <Border Background="#FF111119" CornerRadius="8"
+                                        Padding="10,8" Margin="0,0,0,4">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="1" Text="Gracz123"
+                                                   Foreground="{StaticResource TextPrimary}"
+                                                   FontSize="13" FontWeight="SemiBold"
+                                                   VerticalAlignment="Center"/>
+                                    </Grid>
+                                </Border>
+
+                                <Border Background="#FF111119" CornerRadius="8"
+                                        Padding="10,8" Margin="0,0,0,4">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="1" Text="SigmaBoy67"
+                                                   Foreground="{StaticResource TextSecondary}"
+                                                   FontSize="13" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </Border>
+
+                                <Border Background="#FF111119" CornerRadius="8"
+                                        Padding="10,8" Margin="0,0,0,8">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="1" Text="Gejlong"
+                                                   Foreground="{StaticResource TextSecondary}"
+                                                   FontSize="13" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </Border>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Grid.Column="0"
+                                            Style="{StaticResource SmallAccentButton}"
+                                            Content="＋ Dodaj alt" Margin="0,0,4,0"/>
+                                    <Button Grid.Column="1"
+                                            Style="{StaticResource SmallAccentButton}"
+                                            Content="🗑 Usuń" Margin="4,0,0,0"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Style="{StaticResource GlowCardStyle}" Margin="0,0,0,0">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock Text="🎨" FontSize="18"
+                                               VerticalAlignment="Center" Margin="0,0,8,0"/>
+                                    <TextBlock FontSize="18" FontWeight="Bold"
+                                               Foreground="{StaticResource AccentBrush}"
+                                               VerticalAlignment="Center">
+                                        <TextBlock.Effect>
+                                            <DropShadowEffect Color="{StaticResource GlowColor}"
+                                                              BlurRadius="12" ShadowDepth="0"
+                                                              Opacity="0.5"/>
+                                        </TextBlock.Effect>
+                                        Skin Changer
+                                    </TextBlock>
+                                </StackPanel>
+
+                                <Border Background="#FF111119" CornerRadius="8"
+                                        Height="80" Margin="0,0,0,10"
+                                        BorderBrush="#FF2D2D44" BorderThickness="1">
+                                    <StackPanel VerticalAlignment="Center"
+                                                HorizontalAlignment="Center">
+                                        <TextBlock Text="🧍" FontSize="30"
+                                                   HorizontalAlignment="Center"/>
+                                        <TextBlock Text="Obecny skin"
+                                                   Foreground="{StaticResource TextSecondary}"
+                                                   FontSize="11" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Border>
+
+                                <Grid Margin="0,0,0,8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <RadioButton Grid.Column="0" Content="Steve"
+                                                 Foreground="{StaticResource TextPrimary}"
+                                                 IsChecked="True" GroupName="SkinType"
+                                                 VerticalAlignment="Center" Margin="4,0,0,0"/>
+                                    <RadioButton Grid.Column="1" Content="Alex"
+                                                 Foreground="{StaticResource TextPrimary}"
+                                                 GroupName="SkinType"
+                                                 VerticalAlignment="Center" Margin="4,0,0,0"/>
+                                </Grid>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Button Grid.Column="0"
+                                            Style="{StaticResource SmallAccentButton}"
+                                            Content="📂 Wczytaj" Margin="0,0,4,0"/>
+                                    <Button Grid.Column="1"
+                                            Style="{StaticResource SmallAccentButton}"
+                                            Content="🔄 Reset" Margin="4,0,0,0"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+            <Grid x:Name="panelMods" Visibility="Collapsed" Margin="20">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <TextBlock FontSize="26" FontWeight="Bold"
+                                   Foreground="{StaticResource AccentBrush}"
+                                   Margin="0,0,0,10">
+                            <TextBlock.Effect>
+                                <DropShadowEffect Color="{StaticResource GlowColor}"
+                                                  BlurRadius="15" ShadowDepth="0"
+                                                  Opacity="0.4"/>
+                            </TextBlock.Effect>
+                            Zainstalowane mody
+                        </TextBlock>
+
+                        <TextBlock Text="Kliknij, aby włączyć / wyłączyć mod"
+                                   Foreground="{StaticResource TextSecondary}"
+                                   FontSize="12" FontStyle="Italic"
+                                   Margin="6,0,0,12"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <ToggleButton Grid.Row="0" Grid.Column="0"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="True">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="⚔" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Lorem Ipsum Mod"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v1.0.0"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+
+                            <ToggleButton Grid.Row="0" Grid.Column="1"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="True">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="🛡" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Dolor Sit Amet"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v2.3.1"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+
+                            <ToggleButton Grid.Row="0" Grid.Column="2"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="False">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="🔮" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Consectetur Module"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v0.8.5"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Grid.Row="1" Grid.Column="0"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="True">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="🌟" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Excepteur Pack"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v3.1.0"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+
+                            <ToggleButton Grid.Row="1" Grid.Column="1"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="False">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="🔧" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Adipiscing Toolkit"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v1.4.2"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+
+                            <ToggleButton Grid.Row="1" Grid.Column="2"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="True">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="⚡" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Tempor Incididunt"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v2.0.0"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Grid.Row="2" Grid.Column="0"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="False">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="🎯" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Veniam Quis"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v0.5.3"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Grid.Row="2" Grid.Column="1"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="True">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="🔥" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Nostrud Exercit"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v4.2.0"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+                            <ToggleButton Grid.Row="2" Grid.Column="2"
+                                          Style="{StaticResource ModToggleStyle}"
+                                          IsChecked="False">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <TextBlock Text="💎" FontSize="30"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,0,0,8"/>
+                                    <TextBlock Text="Cupidatat Pro"
+                                               FontWeight="SemiBold" FontSize="13"
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="v1.7.1"
+                                               Foreground="{StaticResource TextSecondary}"
+                                               FontSize="11"
+                                               HorizontalAlignment="Center"
+                                               Margin="0,4,0,0"/>
+                                </StackPanel>
+                            </ToggleButton>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
         </Grid>
-        <Button Name="play" Click="play_Click" Grid.Row="2"
-            Height="60"
-            Width="200"
-            HorizontalAlignment="Center">
-            Graj
-        </Button>
+        <Border Grid.Row="2" Background="#FF0F0F18"
+                BorderBrush="#FF2A2A3D" BorderThickness="0 1 0 0"
+                Padding="0,14,0,14">
+            <Border.Effect>
+                <DropShadowEffect Color="{StaticResource GlowColorSoft}"
+                                  BlurRadius="15" ShadowDepth="-3"
+                                  Direction="90" Opacity="0.12"/>
+            </Border.Effect>
+            <Button Name="play" Click="play_Click"
+                    Style="{StaticResource PlayButtonStyle}"
+                    HorizontalAlignment="Center"
+                    Content="▶  G R A J"/>
+        </Border>
     </Grid>
 </Window>
