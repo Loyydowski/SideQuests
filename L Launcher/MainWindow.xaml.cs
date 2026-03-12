@@ -10,7 +10,6 @@ namespace KitLauncher
         {
             InitializeComponent();
 
-            // Slider RAM — aktualizacja etykiety
             ramSlider.ValueChanged += (s, e) =>
             {
                 if (ramLabel != null)
@@ -18,7 +17,6 @@ namespace KitLauncher
             };
         }
 
-        // ---------- Przełączanie zakładek ----------
 
         private void TabNews_Click(object sender, RoutedEventArgs e)
             => SwitchTab("news");
@@ -31,17 +29,15 @@ namespace KitLauncher
 
         private void SwitchTab(string tab)
         {
-            // Ukryj wszystkie panele
+       
             panelNews.Visibility = Visibility.Collapsed;
             panelHome.Visibility = Visibility.Collapsed;
             panelMods.Visibility = Visibility.Collapsed;
 
-            // Zresetuj styl wszystkich przycisków
             SetTabInactive(tabNews);
             SetTabInactive(tabHome);
             SetTabInactive(tabMods);
 
-            // Pokaż wybrany panel i podświetl przycisk
             switch (tab)
             {
                 case "news":
@@ -61,20 +57,17 @@ namespace KitLauncher
 
         private void SetTabActive(Button btn)
         {
-            btn.Background = new SolidColorBrush(Color.FromRgb(58, 58, 58));   // jaśniejszy
+            btn.Background = new SolidColorBrush(Color.FromRgb(58, 58, 58));  
             btn.Foreground = Brushes.White;
             btn.BorderBrush = Brushes.Orange;
         }
 
         private void SetTabInactive(Button btn)
         {
-            btn.Background = new SolidColorBrush(Color.FromRgb(45, 45, 45));   // ciemniejszy
+            btn.Background = new SolidColorBrush(Color.FromRgb(45, 45, 45));   
             btn.Foreground = Brushes.Gray;
             btn.BorderBrush = Brushes.Transparent;
         }
-
-        // ---------- Przycisk Graj ----------
-
         private void play_Click(object sender, RoutedEventArgs e)
         {
             string nick = nickBox.Text;
