@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b7hhhnkx61yk7"
+path="res://.godot/imported/DialogWprowadzenieNocy2.dialogue-fa9a49898a5a04ba1e0cff8de3be6983.tres"
+
+[deps]
+
+source_file="res://dialogi/DialogWprowadzenieNocy2.dialogue"
+dest_files=["res://.godot/imported/DialogWprowadzenieNocy2.dialogue-fa9a49898a5a04ba1e0cff8de3be6983.tres"]
+
+[params]
+
+defaults=true

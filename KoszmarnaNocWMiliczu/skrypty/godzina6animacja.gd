@@ -15,6 +15,7 @@ var fade_rect: ColorRect
 
 func _ready():
 	# --- Tworzymy czarny prostokąt na wierzchu do fadeoutu ---
+	Global.czy1nocukonczona = true
 	fade_rect = ColorRect.new()
 	fade_rect.color = Color(0, 0, 0, 0)  # Na start przezroczysty
 	fade_rect.set_anchors_preset(PRESET_FULL_RECT)
