@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b4y1kc35u6ma8"]
+
+[node name="MessageBubble" type="HBoxContainer" unique_id=503215079]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Spacer" type="Control" parent="." unique_id=2125824079]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BubblePanel" type="PanelContainer" parent="." unique_id=653694939]
+layout_mode = 2
+
+[node name="MessageText" type="Label" parent="BubblePanel" unique_id=1366435539]
+layout_mode = 2

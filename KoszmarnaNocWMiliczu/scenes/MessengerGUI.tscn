@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://d2mtin4tfxwrx"]
+
+[ext_resource type="Texture2D" uid="uid://bhc5w2wr6cuxv" path="res://assets/Icons/WWAvatar.jpg" id="1_354v7"]
+
+[node name="Control" type="Control" unique_id=1321451559]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=665169011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MainVBox" type="VBoxContainer" parent="." unique_id=2068437039]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Header" type="HBoxContainer" parent="MainVBox" unique_id=206597388]
+layout_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="MainVBox/Header" unique_id=429137786]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("1_354v7")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainVBox/Header" unique_id=679799454]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainVBox/Header/VBoxContainer" unique_id=1467476466]
+layout_mode = 2
+text = "Wiktoria Waga"
+
+[node name="Label2" type="Label" parent="MainVBox/Header/VBoxContainer" unique_id=28168387]
+layout_mode = 2
+text = "Active Now"
+
+[node name="Control" type="Control" parent="MainVBox/Header" unique_id=110808836]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ikonka Chatu1" type="TextureRect" parent="MainVBox/Header" unique_id=1651920707]
+layout_mode = 2
+
+[node name="Ikonka Chatu2" type="TextureRect" parent="MainVBox/Header" unique_id=1393428973]
+layout_mode = 2
+
+[node name="ChatScroll" type="ScrollContainer" parent="MainVBox" unique_id=224633900]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MessageList" type="VBoxContainer" parent="MainVBox/ChatScroll" unique_id=1875155648]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+
+[node name="InputArea" type="HBoxContainer" parent="MainVBox" unique_id=1226607678]
+layout_mode = 2

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://gunuh2xwtinv" path="res://skrypty/zamknijgre.gd" id="1_yqeox"]
 [ext_resource type="Script" uid="uid://dhkv2gldf5ewr" path="res://skrypty/przyciskopcjemenu.gd" id="3_con2f"]
 [ext_resource type="Script" uid="uid://dw14ahau0r5xa" path="res://skrypty/specjalnanoc.gd" id="3_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://cqbyp1y5vdl1f" path="res://assets/Icons/settings.svg" id="5_v86rl"]
 [ext_resource type="AudioStream" uid="uid://dbo2u3paqn36s" path="res://assets/OST/1.MainMenu.mp3" id="6_g3eks"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
@@ -12,8 +13,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3eks"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
 
 [node name="Menu" type="Control" unique_id=455744426]
 layout_mode = 3
@@ -99,25 +98,22 @@ layout_mode = 2
 mouse_behavior_recursive = 2
 theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxEmpty_4ytvr")
-text = "Wyjście"
+text = " Wyjście "
 script = ExtResource("1_yqeox")
 
-[node name="Button4" type="Button" parent="." unique_id=1965478969]
+[node name="Button4" type="TextureButton" parent="." unique_id=568419318]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -165.0
-offset_top = -30.0
+offset_left = -72.0
+offset_top = -48.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxEmpty_v86rl")
-text = "Opcje"
+texture_normal = ExtResource("5_v86rl")
 script = ExtResource("3_con2f")
-metadata/_edit_use_anchors_ = true
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1368654477]
 stream = ExtResource("6_g3eks")
