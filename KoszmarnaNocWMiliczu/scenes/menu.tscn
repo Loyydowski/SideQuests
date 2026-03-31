@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://gunuh2xwtinv" path="res://skrypty/zamknijgre.gd" id="1_yqeox"]
 [ext_resource type="Script" uid="uid://dhkv2gldf5ewr" path="res://skrypty/przyciskopcjemenu.gd" id="3_con2f"]
 [ext_resource type="Script" uid="uid://dw14ahau0r5xa" path="res://skrypty/specjalnanoc.gd" id="3_mhnvy"]
-[ext_resource type="Texture2D" uid="uid://cqbyp1y5vdl1f" path="res://assets/Icons/settings.svg" id="5_v86rl"]
+[ext_resource type="Texture2D" uid="uid://cc5mbc47qkgj8" path="res://assets/settings.png" id="5_v86rl"]
 [ext_resource type="AudioStream" uid="uid://dbo2u3paqn36s" path="res://assets/OST/1.MainMenu.mp3" id="6_g3eks"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
@@ -109,10 +109,12 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -72.0
-offset_top = -48.0
+offset_top = -69.0
 grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("5_v86rl")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("3_con2f")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1368654477]
