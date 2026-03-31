@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Bartek\\Desktop\\Programista BK\\GameDev\\L Launcher\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8110F447-555B-1E45-FD14-113C942A2E7A}|KitLauncher.csproj|c:\\users\\bartek\\desktop\\programista bk\\gamedev\\l launcher\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8110F447-555B-1E45-FD14-113C942A2E7A}|KitLauncher.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8110F447-555B-1E45-FD14-113C942A2E7A}|KitLauncher.csproj|c:\\users\\bartek\\desktop\\programista bk\\gamedev\\l launcher\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8110F447-555B-1E45-FD14-113C942A2E7A}|KitLauncher.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8110F447-555B-1E45-FD14-113C942A2E7A}|KitLauncher.csproj|c:\\users\\bartek\\desktop\\programista bk\\gamedev\\l launcher\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8110F447-555B-1E45-FD14-113C942A2E7A}|KitLauncher.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Bartek\\AppData\\Local\\Temp\\.vsdbgsrc\\ba71154a7b44d057354e94bf9136ff00912660e0c8e1435d76b141387af3b90b\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -24,6 +24,10 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "XamlReader.cs",
@@ -38,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Programista BK\\GameDev\\L Launcher\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -50,13 +54,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Bartek\\Desktop\\Programista BK\\GameDev\\L Launcher\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Bartek\\Desktop\\Programista BK\\GameDev\\L Launcher\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAEwGAAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAkwJ4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-05T20:11:44.572Z",
               "EditorCaption": ""
