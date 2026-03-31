@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "KHyJMKix9iA=",
+  "dgSpecHash": "Evk5AVjYoQs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Bartek\\Desktop\\Programista BK\\GameDev\\L Launcher\\KitLauncher.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Bartek\\.nuget\\packages\\cmllib.core\\4.0.6\\cmllib.core.4.0.6.nupkg.sha512",
+    "C:\\Users\\Bartek\\.nuget\\packages\\cmllib.core.commons\\4.0.0\\cmllib.core.commons.4.0.0.nupkg.sha512",
+    "C:\\Users\\Bartek\\.nuget\\packages\\lzma-sdk\\19.0.0\\lzma-sdk.19.0.0.nupkg.sha512",
+    "C:\\Users\\Bartek\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512"
+  ],
   "logs": []
 }

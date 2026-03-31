@@ -19,3 +19,9 @@ C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\obj\Debug\net10.0-wind
 C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\obj\Debug\net10.0-windows\KitLauncher.pdb
 C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\obj\Debug\net10.0-windows\KitLauncher.genruntimeconfig.cache
 C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\obj\Debug\net10.0-windows\ref\KitLauncher.dll
+C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\obj\Debug\net10.0-windows\KitLauncher.csproj.AssemblyReference.cache
+C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\bin\Debug\net10.0-windows\CmlLib.Core.dll
+C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\bin\Debug\net10.0-windows\CmlLib.Core.Commons.dll
+C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\bin\Debug\net10.0-windows\SevenZip.dll
+C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\bin\Debug\net10.0-windows\ICSharpCode.SharpZipLib.dll
+C:\Users\Bartek\Desktop\Programista BK\GameDev\L Launcher\obj\Debug\net10.0-windows\KitLaunc.69C6038A.Up2Date

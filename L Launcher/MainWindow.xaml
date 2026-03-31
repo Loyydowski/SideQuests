@@ -11,6 +11,36 @@
         AllowsTransparency="False">
 
     <Window.Resources>
+        <Style x:Key="GlowProgressBarStyle" TargetType="ProgressBar">
+            <Setter Property="Height" Value="8"/>
+            <Setter Property="Background" Value="#FF1A1A28"/>
+            <Setter Property="Foreground" Value="{DynamicResource AccentBrush}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Grid>
+                            <Border x:Name="PART_Track" 
+                        CornerRadius="4" 
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="#FF2D2D44" 
+                        BorderThickness="1"/>
+                            <Border x:Name="PART_Indicator" 
+                        CornerRadius="4" 
+                        HorizontalAlignment="Left"
+                        Background="{TemplateBinding Foreground}">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="{DynamicResource GlowColor}"
+                                          BlurRadius="15" 
+                                          ShadowDepth="0"
+                                          Opacity="0.7"/>
+                                </Border.Effect>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Color x:Key="Accent">#9B59B6</Color>
         <Color x:Key="AccentLight">#C39BD3</Color>
         <Color x:Key="AccentDark">#7D3C98</Color>
@@ -38,19 +68,19 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                SnapsToDevicePixels="True">
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            SnapsToDevicePixels="True">
                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
+                                          VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border"
-                                        Property="Background" Value="#FF1A1A28"/>
+                                    Property="Background" Value="#FF1A1A28"/>
                                 <Setter Property="Foreground"
-                                        Value="{StaticResource AccentLBrush}"/>
+                                    Value="{StaticResource AccentLBrush}"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -68,7 +98,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="playBorder" CornerRadius="12"
-                                SnapsToDevicePixels="True">
+                            SnapsToDevicePixels="True">
                             <Border.Background>
                                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                                     <GradientStop Color="{StaticResource Accent}" Offset="0"/>
@@ -77,11 +107,11 @@
                             </Border.Background>
                             <Border.Effect>
                                 <DropShadowEffect Color="{StaticResource GlowColor}"
-                                                  BlurRadius="35" ShadowDepth="0"
-                                                  Opacity="0.55"/>
+                                              BlurRadius="35" ShadowDepth="0"
+                                              Opacity="0.55"/>
                             </Border.Effect>
                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
+                                          VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -96,8 +126,8 @@
                                 <Setter TargetName="playBorder" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="{StaticResource AccentLight}"
-                                                          BlurRadius="50" ShadowDepth="0"
-                                                          Opacity="0.7"/>
+                                                      BlurRadius="50" ShadowDepth="0"
+                                                      Opacity="0.7"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -108,7 +138,7 @@
                                     </Setter.Value>
                                 </Setter>
                                 <Setter TargetName="playBorder" Property="RenderTransformOrigin"
-                                        Value="0.5,0.5"/>
+                                    Value="0.5,0.5"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -126,11 +156,11 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="btnBorder" CornerRadius="6"
-                                Padding="14,0" SnapsToDevicePixels="True"
-                                Background="#FF2A2A40" BorderBrush="#FF3D3D5C"
-                                BorderThickness="1">
+                            Padding="14,0" SnapsToDevicePixels="True"
+                            Background="#FF2A2A40" BorderBrush="#FF3D3D5C"
+                            BorderThickness="1">
                             <ContentPresenter HorizontalAlignment="Center"
-                                              VerticalAlignment="Center"/>
+                                          VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
@@ -143,12 +173,12 @@
                                     </Setter.Value>
                                 </Setter>
                                 <Setter TargetName="btnBorder" Property="BorderBrush"
-                                        Value="#C39BD3"/>
+                                    Value="#C39BD3"/>
                                 <Setter TargetName="btnBorder" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="#9B59B6"
-                                                          BlurRadius="15" ShadowDepth="0"
-                                                          Opacity="0.5"/>
+                                                      BlurRadius="15" ShadowDepth="0"
+                                                      Opacity="0.5"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -165,12 +195,12 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
                         <Border x:Name="modBorder"
-                                Background="#FF1A1A28"
-                                CornerRadius="12"
-                                Padding="16,18"
-                                BorderBrush="#FF2D2D44"
-                                BorderThickness="1.5"
-                                SnapsToDevicePixels="True">
+                            Background="#FF1A1A28"
+                            CornerRadius="12"
+                            Padding="16,18"
+                            BorderBrush="#FF2D2D44"
+                            BorderThickness="1.5"
+                            SnapsToDevicePixels="True">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*"/>
@@ -178,39 +208,39 @@
                                 </Grid.RowDefinitions>
 
                                 <ContentPresenter Grid.Row="0"
-                                                  HorizontalAlignment="Center"
-                                                  VerticalAlignment="Center"/>
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
                                 <Border x:Name="statusBar" Grid.Row="1"
-                                        CornerRadius="3" Height="5"
-                                        Margin="8,12,8,0"
-                                        Background="#FF2D2D44"/>
+                                    CornerRadius="3" Height="5"
+                                    Margin="8,12,8,0"
+                                    Background="#FF2D2D44"/>
                             </Grid>
                         </Border>
 
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter Property="Foreground"
-                                        Value="{StaticResource TextPrimary}"/>
+                                    Value="{StaticResource TextPrimary}"/>
                                 <Setter TargetName="modBorder"
-                                        Property="BorderBrush" Value="#9B59B6"/>
+                                    Property="BorderBrush" Value="#9B59B6"/>
                                 <Setter TargetName="modBorder"
-                                        Property="Background" Value="#FF1E1E32"/>
+                                    Property="Background" Value="#FF1E1E32"/>
                                 <Setter TargetName="statusBar"
-                                        Property="Background" Value="#9B59B6"/>
+                                    Property="Background" Value="#9B59B6"/>
                                 <Setter TargetName="statusBar" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="#9B59B6"
-                                                          BlurRadius="12"
-                                                          ShadowDepth="0"
-                                                          Opacity="0.9"/>
+                                                      BlurRadius="12"
+                                                      ShadowDepth="0"
+                                                      Opacity="0.9"/>
                                     </Setter.Value>
                                 </Setter>
                                 <Setter TargetName="modBorder" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="#9B59B6"
-                                                          BlurRadius="22"
-                                                          ShadowDepth="0"
-                                                          Opacity="0.4"/>
+                                                      BlurRadius="22"
+                                                      ShadowDepth="0"
+                                                      Opacity="0.4"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -220,11 +250,11 @@
                                     <Condition Property="IsMouseOver" Value="True"/>
                                 </MultiTrigger.Conditions>
                                 <Setter TargetName="modBorder"
-                                        Property="Background" Value="#FF252538"/>
+                                    Property="Background" Value="#FF252538"/>
                                 <Setter TargetName="modBorder"
-                                        Property="BorderBrush" Value="#FF3D3D5C"/>
+                                    Property="BorderBrush" Value="#FF3D3D5C"/>
                                 <Setter TargetName="statusBar"
-                                        Property="Background" Value="#FF3D3D5C"/>
+                                    Property="Background" Value="#FF3D3D5C"/>
                             </MultiTrigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
@@ -232,31 +262,31 @@
                                     <Condition Property="IsMouseOver" Value="True"/>
                                 </MultiTrigger.Conditions>
                                 <Setter TargetName="modBorder"
-                                        Property="BorderBrush" Value="#C39BD3"/>
+                                    Property="BorderBrush" Value="#C39BD3"/>
                                 <Setter TargetName="modBorder"
-                                        Property="Background" Value="#FF252540"/>
+                                    Property="Background" Value="#FF252540"/>
                                 <Setter TargetName="statusBar"
-                                        Property="Background" Value="#C39BD3"/>
+                                    Property="Background" Value="#C39BD3"/>
                                 <Setter TargetName="modBorder" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="#C39BD3"
-                                                          BlurRadius="32"
-                                                          ShadowDepth="0"
-                                                          Opacity="0.55"/>
+                                                      BlurRadius="32"
+                                                      ShadowDepth="0"
+                                                      Opacity="0.55"/>
                                     </Setter.Value>
                                 </Setter>
                             </MultiTrigger>
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="modBorder"
-                                        Property="RenderTransform">
+                                    Property="RenderTransform">
                                     <Setter.Value>
                                         <ScaleTransform ScaleX="0.96"
-                                                        ScaleY="0.96"/>
+                                                    ScaleY="0.96"/>
                                     </Setter.Value>
                                 </Setter>
                                 <Setter TargetName="modBorder"
-                                        Property="RenderTransformOrigin"
-                                        Value="0.5,0.5"/>
+                                    Property="RenderTransformOrigin"
+                                    Value="0.5,0.5"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -272,8 +302,8 @@
             <Setter Property="Effect">
                 <Setter.Value>
                     <DropShadowEffect Color="{StaticResource GlowColorSoft}"
-                                      BlurRadius="18" ShadowDepth="0"
-                                      Opacity="0.15"/>
+                                  BlurRadius="18" ShadowDepth="0"
+                                  Opacity="0.15"/>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
@@ -282,8 +312,8 @@
                     <Setter Property="Effect">
                         <Setter.Value>
                             <DropShadowEffect Color="{StaticResource GlowColor}"
-                                              BlurRadius="28" ShadowDepth="0"
-                                              Opacity="0.35"/>
+                                          BlurRadius="28" ShadowDepth="0"
+                                          Opacity="0.35"/>
                         </Setter.Value>
                     </Setter>
                 </Trigger>
@@ -315,32 +345,32 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Border x:Name="bd" Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="8" SnapsToDevicePixels="True">
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8" SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost"
-                                          VerticalAlignment="Center"/>
+                                      VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="bd" Property="BorderBrush"
-                                        Value="#9B59B6"/>
+                                    Value="#9B59B6"/>
                                 <Setter TargetName="bd" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="#9B59B6"
-                                                          BlurRadius="12" ShadowDepth="0"
-                                                          Opacity="0.25"/>
+                                                      BlurRadius="12" ShadowDepth="0"
+                                                      Opacity="0.25"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
                             <Trigger Property="IsFocused" Value="True">
                                 <Setter TargetName="bd" Property="BorderBrush"
-                                        Value="#C39BD3"/>
+                                    Value="#C39BD3"/>
                                 <Setter TargetName="bd" Property="Effect">
                                     <Setter.Value>
                                         <DropShadowEffect Color="#9B59B6"
-                                                          BlurRadius="20" ShadowDepth="0"
-                                                          Opacity="0.4"/>
+                                                      BlurRadius="20" ShadowDepth="0"
+                                                      Opacity="0.4"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -891,17 +921,55 @@
             </Grid>
         </Grid>
         <Border Grid.Row="2" Background="#FF0F0F18"
-                BorderBrush="#FF2A2A3D" BorderThickness="0 1 0 0"
-                Padding="0,14,0,14">
+        BorderBrush="#FF2A2A3D" BorderThickness="0 1 0 0"
+        Padding="0,14,0,14">
             <Border.Effect>
                 <DropShadowEffect Color="{StaticResource GlowColorSoft}"
-                                  BlurRadius="15" ShadowDepth="-3"
-                                  Direction="90" Opacity="0.12"/>
+                          BlurRadius="15" ShadowDepth="-3"
+                          Direction="90" Opacity="0.12"/>
             </Border.Effect>
-            <Button Name="play" Click="play_Click"
-                    Style="{StaticResource PlayButtonStyle}"
-                    HorizontalAlignment="Center"
-                    Content="▶  G R A J"/>
+
+            <StackPanel HorizontalAlignment="Center" Width="400">
+                <Grid x:Name="loadingPanel" Visibility="Collapsed" Margin="0,0,0,12">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="statusText" 
+                       Grid.Row="0"
+                       Text="Przygotowywanie..."
+                       Foreground="{StaticResource TextPrimary}"
+                       FontSize="13"
+                       FontWeight="SemiBold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,8"/>
+                    <ProgressBar x:Name="progressBar"
+                         Grid.Row="1"
+                         Style="{StaticResource GlowProgressBarStyle}"
+                         Minimum="0" 
+                         Maximum="100" 
+                         Value="0"/>
+                    <TextBlock x:Name="progressText"
+                       Grid.Row="2"
+                       Text="0%"
+                       Foreground="{StaticResource AccentBrush}"
+                       FontSize="12"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,6,0,0">
+                        <TextBlock.Effect>
+                            <DropShadowEffect Color="{StaticResource GlowColor}"
+                                      BlurRadius="8" ShadowDepth="0"
+                                      Opacity="0.5"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                </Grid>
+                <Button x:Name="play" Click="play_Click"
+                Style="{StaticResource PlayButtonStyle}"
+                HorizontalAlignment="Center"
+                Content="▶  G R A J"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>
